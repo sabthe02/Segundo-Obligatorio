@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1694130244 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\boolean.cpp
+	"Boolean.h"
+
+1694130245 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\boolean.h
+	<stdio.h>
+
+1700075983 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.cpp
+	"Evaluacion.h"
+
+1695164340 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.cpp
+	"Fecha.h"
+	"Boolean.h"
+
+1700063476 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.h
+	"String.h"
+
+1700063155 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.h
+	<stdio.h>
+	"Boolean.h"
+
+1697149779 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.cpp
+	"String.h"
+
+1700073433 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.cpp
+	"Menus.h"
+
+1700072973 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
+	<stdio.h>
+
+1700076826 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.cpp
+	"Consulta.h"
+
+1700077000 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.h
+	"Fecha.h"
+	"Evaluacion.h"
+
+1700075951 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
+	<stdio.h>
+
+1700072923 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
+	"Menus.h"
+	"Paciente.h"
+	"Consulta.h"
+
+1700079354 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.h
+	"Consultas.h"
+
+1700061611 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.cpp
+	"Paciente.h"
+
+1700074894 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.cpp
+	"Consultas.h"
+
+1700074374 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
+	"Consulta.h"
+
+1700074818 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
+	"Consultorio.h"
+
+1700073989 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
+	"Paciente.h"
+
