@@ -7,7 +7,6 @@ typedef struct {long int cedula;
          String apellido;
          long int telefono;
          int cantConsultas;
-         Lista Consultas; //Preguntar!!!!
         }paciente;
 
 void desplegarPaciente (paciente p);
@@ -25,5 +24,11 @@ long int seleccionarTelefono (paciente p);
 int seleccionarCantConsultas (paciente p);
 
 Lista seleccionarConsultas (paciente p);
+
+void BajarPaciente (paciente p, FILE * f); // Escribe en el archivo los datos del paciente p.
+// Precondición: El archivo viene abierto para escritura.
+
+void LevantarPaciente (paciente &p, FILE * f); // Lee desde el archivo los datos del paciente p.
+// Precondición: El archivo viene abierto para lectura.
 
 #endif // PACIENTE_H_INCLUDED

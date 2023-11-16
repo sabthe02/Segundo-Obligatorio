@@ -32,24 +32,21 @@ void print (String s)
 }
 }
 
-void scan (String &s)
-{
-int i = 0;
+void scan (String &s) {
+String aux = new char[MAX];
+int i=0;
 char c;
-String aux = new char [MAX];
+fflush (stdin);
 
-scanf("%c",&c);
-while ((c != '\n') && (i < MAX - 1))
-{
- aux[i] = c;
- i++;
-scanf("%c",&c);
- }
- aux[i] = '\0';
-
- strcop(s, aux);
- strdestruir (aux);
-
+scanf ("%c", &c);
+while (c!= '\n' && i < MAX-1) {
+       aux[i] = c;
+       i++;
+       scanf ("%c", &c);
+}
+       aux[i] = '\0';
+       strcop (s,aux);
+       strdestruir (aux);
 }
 
 boolean strmen (String s1, String s2)
@@ -91,15 +88,13 @@ return iguales;
 void strcop (String &s1,String s2)
 {
 int i = 0;
+int largo = strlar(s2) + 1;
+delete [] s1;
+s1 = new char[largo];
 
-delete []s1;
-int largo = strlar(s2);
-s1 = new char [largo+1];
-
-while (s2[i] != '\0')
-{
- s1[i] = s2[i];
- i++;
+while (s2[i] != '\0') {
+        s1[i] = s2[i];
+        i++;
 }
 s1[i] = '\0';
 }
@@ -138,4 +133,30 @@ void strswp (String &s1,String &s2)
  s1 = s2;
  s2 = aux;
 
+}
+
+void Bajar_String (String s, FILE * f){
+int i =0;
+
+while (s[i]!='\0' && (!feof(f))) {
+    fwrite(&s[i], sizeof(char),1, f);
+    i++;
+}
+fwrite(&s[i], sizeof(char),1, f);
+
+}
+
+void Levantar_String (String &s, FILE * f) {
+int i = 0;
+String aux;
+aux = new char [MAX];
+
+fread(&aux[i], sizeof(char), 1, f);
+
+while (aux[i]!='\0' && (!feof(f))) {
+    i++;
+    fread(&aux[i], sizeof(char), 1, f);
+}
+strcop(s, aux);
+delete []aux;
 }

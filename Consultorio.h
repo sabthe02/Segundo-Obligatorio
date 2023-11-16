@@ -9,27 +9,56 @@ typedef struct nodoA    {paciente info;
                         }nodo;
 typedef nodo *ABB;
 
-//Crear un ·rbol
+//Crear un √°rbol
 void Crear (ABB &a);
 
-// Saber si el ·rbol est· vacÌo
+// Saber si el √°rbol est√° vac√≠o
 boolean Vacio (ABB a);
 
 // Devolver raiz
-//PrecondiciÛn: ¡rbol no vacÌo
+//Precondici√≥n: √Årbol no vac√≠o
 paciente darRaiz (ABB a);
 
-// Obtener sub·rbol izquierdo
-//PrecondiciÛn: ¡rbol no vacÌo
+// Obtener sub√°rbol izquierdo
+//Precondici√≥n: √Årbol no vac√≠o
 ABB HijoIzq (ABB a);
 
-// Obtener sub·rbol derecho
-//PrecondiciÛn: ¡rbol no vacÌo
-
+// Obtener sub√°rbol derecho
+//Precondici√≥n: √Årbol no vac√≠o
 ABB HijoDer (ABB a);
 
-// Dados dos ·rboles y un valor, devolver un nuevo ·rbol, colocando el valor como raÌz y los dos ·rboles como sub·rboles
-//PrecondiciÛn: el valor no existÌa previamente en el ABB
-void Insert (ABB &a, /*T*/ int valor);
+// Dados dos √°rboles y un valor, devolver un nuevo √°rbol, colocando el valor como ra√≠z y los dos √°rboles como sub√°rboles
+//Precondici√≥n: el valor no exist√≠a previamente en el ABB
+void Insert (ABB &a, paciente valor);
+
+//Altas y Bajas
+//ÔÇ∑ Registrar los datos de un nuevo paciente. Se debe verificar previamente que no exista otro paciente registrado con la misma c√©dula.
+//ÔÇ∑ Registrar la realizaci√≥n de una nueva consulta hecha por un paciente.
+
+boolean existe (ABB a, long int cedula);
+
+//Se debe verificar previamente que la c√©dula de dicho paciente exista en el sistema
+//y que la fecha de la nueva consulta sea v√°lida e igual o posterior a la fecha de la √∫ltima consulta registrada hasta el momento en el sistema.
+//ÔÇ∑ Dada la c√©dula que identifica a un paciente, eliminar dicho paciente del sistema.
+//Se debe verificar previamente que dicha c√©dula exista en el sistema.
+//Tambi√©n se deben eliminar del sistema todas las consultas realizadas por dicho paciente.
+
+// Dada la c√©dula que identifica a un paciente, eliminar dicho paciente del sistema.
+// Se debe verificar previamente que dicha c√©dula exista en el sistema.
+//Tambi√©n se deben eliminar del sistema todas las consultas realizadas por dicho paciente.
+
+paciente Minimo (ABB a);
+
+void Borrar_Minimo (ABB &a);
+
+void eliminarConCedula (long int cedula, ABB &a);
+
+//
+void BajarPacientes (ABB a, String nomArch);
+//Guardar informaci√≥n de todos los pacientes en archivo
+//Precondicion: Archivo viene abierto en modo escritura
+
+void LevantarPacientes (ABB &a, String nomArch);
+//Subir informaci√≥n de todos los pacientes desde archivo
 
 #endif // CONSULTORIO_H_INCLUDED

@@ -1,14 +1,19 @@
 #include "Menus.h"
 #include "Paciente.h"
 #include "Consulta.h"
-
+#include "Consultorio.h"
 
 int main()
 {
 int selec, selecc, sele, selecci;
 fecha f;
+paciente p;
+ABB a;
 long int cedula, nume;
 
+//FILE *f = fopen("Pacientes.dat", "rb");
+//LevantarPacientes (a, "Pacientes.dat");
+//fclose(f);
 
 while (selec != 4) {
     menuPrincipal (selec);
@@ -18,6 +23,11 @@ while (selec != 4) {
                 fflush(stdin);
                     switch (selecc) {
                         case 1: printf("\nRegistrar alta de un paciente");
+                        cargarPaciente(p);
+                        while (existe(a, seleccionarCedulaPaciente(p))) {
+                            printf("\nError, paciente ya existe, ingresar otra cedula ");
+                        }
+                        Insert(a, p);
                         break;
                         case 2: printf("\nRegistrar nueva consulta de un paciente ");
                         break;
@@ -64,6 +74,9 @@ while (selec != 4) {
                 }
         break;
         case 4: printf("\nSaliendo...");
+//                FILE *f = fopen ("Pacientes.dat", "wb");
+//                BajarPacientes(a, "Pacientes.dat");
+//                fclose(f);
         break;
     }
 
