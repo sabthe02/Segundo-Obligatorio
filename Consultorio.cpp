@@ -158,27 +158,20 @@ if (a !=NULL) {
 
 }
 
-ABB sumarConsultaAlABB (ABB a, long int ced) { // No funciona!!!!
-
-if (a == NULL) {
-    return a;
-}
-else {
-    if (ced == seleccionarCedulaPaciente(a->info)) {
-        sumarConsulta(a->info);
-        return a;
-    }
-    else {
-            if (ced < seleccionarCedulaPaciente(a->info)) {
-                return sumarConsultaAlABB (a->hizq, ced);
-            }
-            else {
-                return sumarConsultaAlABB (a->hder, ced);
-            }
+void sumarConsultaAlABB (ABB &a, long int ced)
+{
+if (a != NULL )
+{
+    {
+         if (seleccionarCedulaPaciente (a->info) == ced)
+             sumarConsulta (a->info);
+         else
+            {if (ced < seleccionarCedulaPaciente (a->info))
+             sumarConsultaAlABB (a->hizq, ced);
+             else sumarConsultaAlABB (a->hder, ced);
+              }
     }
 }
-
-
 }
 
 int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas) {
