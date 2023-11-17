@@ -76,7 +76,7 @@ void listarPacientesSinConsultas (ABB a);
 //deben listarse todos en una misma línea.
 
 //Sumarle una consulta al paciente con la cédula que realizó una consulta
-ABB sumarConsultaAlABB (ABB a, long int ced);
+void sumarConsultaAlABB (ABB &a, long int ced);
 
 int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
 // Dada una cantidad de consultas, obtener la cantidad de pacientes registrados en el sistema que han realizado al menos dicha cantidad de consultas
