@@ -8,10 +8,12 @@ printf("\n MENU PRINCIPAL: Elija una opcion ingresando el numero: ");
     printf("\n 4. Salir del programa");
     printf("\n");
     scanf("%d", &seleccion);
+    fflush(stdin);
     while (seleccion !=1 && seleccion !=2 && seleccion !=3 && seleccion !=4) {
         printf("\nPor favor ingresar numero entre 1 y 5");
         printf("\n");
         scanf("%d", &seleccion);
+        fflush(stdin);
     }
 }
 
@@ -23,10 +25,12 @@ void menuAltasYBajas (int &seleccion) {
     printf("\n 4. Ir a menu principal");
     printf("\n");
     scanf("%d", &seleccion);
+    fflush(stdin);
     while (seleccion !=1 && seleccion !=2 && seleccion !=3 && seleccion !=4) {
         printf("\nPor favor ingresar numero entre 1 y 4");
         printf("\n");
         scanf("%d", &seleccion);
+        fflush(stdin);
     }
 }
 
@@ -39,10 +43,12 @@ void menuListados (int &seleccion) {
     printf("\n 5. Volver al menu principal");
     printf("\n");
     scanf("%d", &seleccion);
+    fflush(stdin);
             while (seleccion !=1 && seleccion !=2 && seleccion !=3 && seleccion !=4 && seleccion !=5) {
                     printf("\nPor favor ingresar numero entre 1 y 8");
                     printf("\n");
                     scanf("%d", &seleccion);
+                    fflush(stdin);
             }
 }
 
@@ -55,10 +61,12 @@ void menuConsultas (int &seleccion) {
     printf("\n 5. Volver al menu principal");
     printf("\n");
     scanf("%d", &seleccion);
+    fflush(stdin);
             while (seleccion !=1 && seleccion !=2 && seleccion !=3 && seleccion !=4 && seleccion !=5) {
                     printf("\nPor favor ingresar numero entre 1 y 8");
                     printf("\n");
                     scanf("%d", &seleccion);
+                    fflush(stdin);
             }
 }
 

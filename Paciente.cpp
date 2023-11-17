@@ -4,16 +4,13 @@ void desplegarPaciente (paciente p) {
 printf("\n Cedula: %ld ", p.cedula);
 printf("Nombre: ");
 print(p.nombre);
-printf("Apellido: ");
+printf(" Apellido: ");
 print(p.apellido);
 printf(" Telefono: %ld ", p.telefono);
 printf("Cantidad de consultas: %d ", p.cantConsultas);
-// No pide acá listar detalle de consultas
-
 }
 
 void cargarPaciente (paciente &p) {
-FILE *f;
 printf("\nIngresar cedula del paciente: ");
 scanf("%ld",&p.cedula);
 fflush(stdin);
@@ -26,8 +23,6 @@ scan (p.apellido);
 printf("\nIngrese telefono del paciente: ");
 scanf("%ld", &p.telefono);
 p.cantConsultas = 0;
-// No pide acá cargar las consultas
-
 }
 
 long int seleccionarCedulaPaciente (paciente p) {
@@ -49,6 +44,12 @@ return p.telefono;
 
 int seleccionarCantConsultas (paciente p) {
 return p.cantConsultas;
+}
+
+paciente sumarConsulta (paciente p) {
+p.cantConsultas = p.cantConsultas + 1;
+return p;
+
 }
 
 

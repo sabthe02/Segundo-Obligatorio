@@ -25,6 +25,9 @@ int seleccionarCantConsultas (paciente p);
 
 Lista seleccionarConsultas (paciente p);
 
+paciente sumarConsulta (paciente p);
+
+
 void BajarPaciente (paciente p, FILE * f); // Escribe en el archivo los datos del paciente p.
 // Precondición: El archivo viene abierto para escritura.
 

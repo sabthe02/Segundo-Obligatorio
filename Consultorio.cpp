@@ -130,6 +130,57 @@ void eliminarConCedula (long int cedula, ABB &a) {
 
 }
 
+void listarPacientes (ABB a) {
+ if (a != NULL) {
+    listarPacientes (a->hizq);
+    desplegarPaciente (a->info);
+    listarPacientes (a->hder);
+ }
+
+
+}
+
+void listarPacientesSinConsultas (ABB a) {
+
+if (a !=NULL) {
+    if (seleccionarCantConsultas(a->info) == 0 ) {
+        listarPacientesSinConsultas (a->hizq);
+        desplegarPaciente (a->info);
+        listarPacientesSinConsultas (a->hder);
+    }
+    else {
+        listarPacientesSinConsultas (a->hizq);
+        listarPacientesSinConsultas (a->hder);
+    }
+
+}
+
+
+}
+
+ABB sumarConsultaAlABB (ABB a, long int ced) {
+
+if (a == NULL) {
+    return a;
+}
+else {
+    if (ced == seleccionarCedulaPaciente(a->info)) {
+        sumarConsulta(a->info);
+        return a;
+    }
+    else {
+            if (ced < seleccionarCedulaPaciente(a->info)) {
+                return sumarConsultaAlABB (a->hizq, ced);
+            }
+            else {
+                return sumarConsultaAlABB (a->hder, ced);
+            }
+    }
+}
+
+
+}
+
 
 //void BajarPacientes (ABB a, String nomArch) {
 //FILE *f;

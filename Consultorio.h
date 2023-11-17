@@ -51,6 +51,9 @@ paciente Minimo (ABB a);
 
 void Borrar_Minimo (ABB &a);
 
+//Dada la cédula que identifica a un paciente, eliminar dicho paciente del sistema.
+//Se debe verificar previamente que dicha cédula exista en el sistema.
+//También se deben eliminar del sistema todas las consultas realizadas por dicho paciente.
 void eliminarConCedula (long int cedula, ABB &a);
 
 //
@@ -60,5 +63,18 @@ void BajarPacientes (ABB a, String nomArch);
 
 void LevantarPacientes (ABB &a, String nomArch);
 //Subir información de todos los pacientes desde archivo
+
+void listarPacientes (ABB a);
+// Listar todos los pacientes registrados en el sistema, ordenados por cédula de identidad de menor a mayor.
+//Los datos de cada paciente (cédula, nombre, apellido, teléfono y cantidad de consultas realizadas hasta el momento)
+//deben listarse todos en una misma línea.
+
+void listarPacientesSinConsultas (ABB a);
+// Listar aquellos pacientes registrados en el sistema que aún no han realizado ninguna consulta al dentista.
+// Los datos de cada paciente (cédula, nombre, apellido, teléfono y cantidad de consultas realizadas hasta el momento)
+//deben listarse todos en una misma línea.
+
+ABB sumarConsultaAlABB (ABB a, long int ced);
+
 
 #endif // CONSULTORIO_H_INCLUDED
