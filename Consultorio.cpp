@@ -158,7 +158,7 @@ if (a !=NULL) {
 
 }
 
-ABB sumarConsultaAlABB (ABB a, long int ced) {
+ABB sumarConsultaAlABB (ABB a, long int ced) { // No funciona!!!!
 
 if (a == NULL) {
     return a;
@@ -178,6 +178,22 @@ else {
     }
 }
 
+
+}
+
+int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas) {
+if (a == NULL) {
+    return 0;
+}
+else {
+    if (CaConsultas >= seleccionarCantConsultas(a->info)) {
+        return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
+
+    }
+    else {
+        return 0;
+    }
+}
 
 }
 

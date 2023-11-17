@@ -5,7 +5,7 @@
 
 int main()
 {
-int selec, selecc, sele, selecci;
+int selec, selecc, sele, selecci, cConsu;
 fecha f;
 paciente p;
 ABB a;
@@ -65,8 +65,9 @@ while (selec != 4) {
                         printf("\n");
                         break;
                         case 3: printf("\nDada la cedula que identifica a un paciente, listar todas sus consultas, ordenadas en forma cronologica inversa ");
+                        // Ramiro
                         break;
-                        case 4: printf("\nDada una fecha, listar todas las consultas realizadas a partir de dicha fecha ");
+                        case 4: printf("\nDada una fecha, listar todas las consultas realizadas a partir de dicha fecha "); // Ramiro?
                         break;
                         case 5: printf("\nVolviendo al menu principal...\n");
                         break;
@@ -78,6 +79,10 @@ while (selec != 4) {
                 fflush(stdin);
                     switch (selecci) {
                         case 1: printf("\nDada una cantidad de consultas, obtener la cantidad de pacientes registrados en el sistema que han realizado al menos dicha cantidad de consultas hasta el momento ");
+                        printf("\nIngrese cantidad de consultas: ");
+                        scanf("%d", &cConsu);
+                        printf("\nCantidad de pacientes con al menos ese numero de consultas: %d", obtenerPacientesConCantidadDeConsultas(a, cConsu));
+                        printf("\n");
                         break;
                         case 2: printf("\nObtener la cantidad de consultas de cada tipo ");
                         break;

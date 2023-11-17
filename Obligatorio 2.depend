@@ -22,7 +22,7 @@
 1700159977 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.cpp
 	"String.h"
 
-1700104064 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.cpp
+1700196033 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.cpp
 	"Menus.h"
 
 1700104064 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
@@ -38,13 +38,13 @@
 1700104063 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
 	<stdio.h>
 
-1700195538 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
+1700241543 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
 	"Menus.h"
 	"Paciente.h"
 	"Consulta.h"
 	"Consultorio.h"
 
-1700195332 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.h
+1700240640 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.h
 	"Consultas.h"
 
 1700195316 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.cpp
@@ -56,9 +56,9 @@
 1700104062 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
 	"Consulta.h"
 
-1700195811 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
+1700241989 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
 	"Consultorio.h"
 
-1700194234 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
+1700242269 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
 	"Paciente.h"
 

@@ -54,6 +54,7 @@ void Borrar_Minimo (ABB &a);
 //Dada la cédula que identifica a un paciente, eliminar dicho paciente del sistema.
 //Se debe verificar previamente que dicha cédula exista en el sistema.
 //También se deben eliminar del sistema todas las consultas realizadas por dicho paciente.
+// Precondición, cédula del paciente existe en el sistema.
 void eliminarConCedula (long int cedula, ABB &a);
 
 //
@@ -74,7 +75,11 @@ void listarPacientesSinConsultas (ABB a);
 // Los datos de cada paciente (cédula, nombre, apellido, teléfono y cantidad de consultas realizadas hasta el momento)
 //deben listarse todos en una misma línea.
 
+//Sumarle una consulta al paciente con la cédula que realizó una consulta
 ABB sumarConsultaAlABB (ABB a, long int ced);
 
+int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
+// Dada una cantidad de consultas, obtener la cantidad de pacientes registrados en el sistema que han realizado al menos dicha cantidad de consultas
+//hasta el momento.
 
 #endif // CONSULTORIO_H_INCLUDED
