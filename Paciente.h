@@ -25,13 +25,13 @@ int seleccionarCantConsultas (paciente p);
 
 Lista seleccionarConsultas (paciente p);
 
-//Precondición: Paciente existe
-paciente sumarConsulta (paciente p);
+//PrecondiciÃ³n: Paciente existe
+void sumarConsulta (paciente &p);
 
 void BajarPaciente (paciente p, FILE * f); // Escribe en el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para escritura.
+// PrecondiciÃ³n: El archivo viene abierto para escritura.
 
 void LevantarPaciente (paciente &p, FILE * f); // Lee desde el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para lectura.
+// PrecondiciÃ³n: El archivo viene abierto para lectura.
 
 #endif // PACIENTE_H_INCLUDED
