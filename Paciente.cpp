@@ -46,10 +46,8 @@ int seleccionarCantConsultas (paciente p) {
 return p.cantConsultas;
 }
 
-paciente sumarConsulta (paciente p) {
+void sumarConsulta (paciente &p) {
 p.cantConsultas = p.cantConsultas + 1;
-return p;
-
 }
 
 
