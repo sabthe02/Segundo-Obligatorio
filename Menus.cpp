@@ -1,14 +1,14 @@
 #include "Menus.h"
 
 void menuPrincipal (int &seleccion) {
-    printf("\n MENU PRINCIPAL: Elija una opcion ingresando el numero: ");
+printf("\n MENU PRINCIPAL: Elija una opcion ingresando el numero: ");
     printf("\n 1. MENU ALTAS Y BAJAS");
     printf("\n 2. MENU LISTADOS");
     printf("\n 3. MENU CONSULTAS");
     printf("\n 4. Salir del programa");
     printf("\n");
     scanf("%d", &seleccion);
-}
+    }
 
 
 void menuAltasYBajas (int &seleccion) {
@@ -20,7 +20,7 @@ void menuAltasYBajas (int &seleccion) {
     printf("\n");
 
     scanf("%d", &seleccion);
-}
+    }
 
 
 void menuListados (int &seleccion) {

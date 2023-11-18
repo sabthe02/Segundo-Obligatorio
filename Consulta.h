@@ -4,11 +4,11 @@
 #include "Evaluacion.h"
 
 typedef struct {
-    fecha fec;
-    long int cedulaEnConsulta;
-    String motivo;
-    Evaluacion evaluacion;
-} Consulta;
+                fecha fec;
+                long int cedulaEnConsulta;
+                String motivo;
+                Evaluacion evaluacion;
+                } Consulta;
 
 void desplegarConsulta (Consulta c);
 

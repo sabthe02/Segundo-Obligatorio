@@ -4,8 +4,8 @@
 
 
 typedef enum {  EN_TRATAMIENTO,
-    NECESITA_PROTESIS,
-    SALUDABLE} Evaluacion;
+                NECESITA_PROTESIS,
+                SALUDABLE} Evaluacion;
 
 void desplegarEvaluacion (Evaluacion e);
 

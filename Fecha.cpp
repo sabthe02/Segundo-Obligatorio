@@ -15,88 +15,88 @@ void cargarFecha (fecha &f)
 }
 
 void desplegarFecha(fecha f) {
-    printf("%d %d %d\n", f.dia, f.mes, f.anio);
+printf("%d %d %d\n", f.dia, f.mes, f.anio);
 }
 
 int darDia (fecha f) {
 
-    return f.dia;
+return f.dia;
 }
 
 int darMes(fecha f) {
 
-    return f.mes;
+return f.mes;
 }
 
 int darAnio(fecha f) {
-    return f.anio;
+return f.anio;
 
 }
 
 boolean validarFecha (fecha f) {
-    boolean esValida;
+boolean esValida;
 
     switch(f.mes) {
         case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-            if (f.dia >=1 && f.dia <=31 ) {
+                if (f.dia >=1 && f.dia <=31 ) {
                 esValida = TRUE;
-            }
-            else {
+                }
+                else {
                 esValida = FALSE;
-            }
-            break;
+                }
+                break;
         case 4: case 6: case 9: case 11:
-            if (f.dia >=1 && f.dia <=30 ) {
+                if (f.dia >=1 && f.dia <=30 ) {
                 esValida = TRUE;
-            }
-            else {
+                }
+                else {
                 esValida = FALSE;
-            }
-            break;
+                }
+                break;
         case 2:
-            if (f.anio %4==0) {
-                if (f.dia >=1 && f.dia <=29 ) {
+                if (f.anio %4==0) {
+                    if (f.dia >=1 && f.dia <=29 ) {
                     esValida = TRUE;
-                }
-                else {
+                    }
+                    else {
                     esValida = FALSE;
+                    }
                 }
-            }
-            else {
-                if (f.dia >=1 && f.dia <=28 ) {
-                    esValida = TRUE;
-                }
-                else {
-                    esValida = FALSE;
-                }
-            }
-            break;
+                    else {
+                        if (f.dia >=1 && f.dia <=28 ) {
+                        esValida = TRUE;
+                        }
+                        else {
+                        esValida = FALSE;
+                        }
+                    }
+                break;
     }
 
-    return esValida;
+return esValida;
 
 }
 
 boolean MenorFecha (fecha f1, fecha f2)
 {
-    boolean menor = FALSE;
+boolean menor = FALSE;
 
-    if (f1.anio < f2.anio)
-        menor = TRUE;
-    else
+if (f1.anio < f2.anio)
+menor = TRUE;
+else
     {
-        if (f1.anio == f2.anio)
-        {if (f1.mes < f2.mes)
-                menor = TRUE;
-            else
-            {
-                if (f1.anio == f2.anio || f1.mes == f2.mes)
-                {if (f1.dia < f2.dia)
-                        menor = TRUE;}
-            }
+    if (f1.anio == f2.anio)
+    {if (f1.mes < f2.mes)
+    menor = TRUE;
+        else
+        {
+        if (f1.anio == f2.anio || f1.mes == f2.mes)
+        {if (f1.dia < f2.dia)
+        menor = TRUE;}
         }
-    }
-    return menor;
+}
+}
+return menor;
 }
 
 

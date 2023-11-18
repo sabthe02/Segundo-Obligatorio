@@ -3,8 +3,8 @@
 #include "String.h"
 
 typedef struct {int dia;
-    int mes;
-    int anio;}fecha;
+                int mes;
+                int anio;}fecha;
 
 void cargarFecha (fecha &f);
 

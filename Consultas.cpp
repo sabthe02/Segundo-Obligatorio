@@ -135,37 +135,37 @@ void sumarConsultas (Lista &L, Consulta &c)
     Lista aux3;
 
     if (L == NULL)
-    {cargarConsulta(c);
-        InsFront(L, c);}
+        {cargarConsulta(c);
+         InsFront(L, c);}
 
     else {
 
-        aux2 = L;
-        aux3 = L;
+          aux2 = L;
+          aux3 = L;
 
-        aux = new nodo2;
-        cargarConsulta(c);
-        aux->info = c;
+          aux = new nodo2;
+          cargarConsulta(c);
+          aux->info = c;
 
-        while (aux2 != NULL && !agregada)
-        {if (MenorFecha (seleccionarFecha (aux2->info), seleccionarFecha (aux->info)) == TRUE && MenorFecha (seleccionarFecha (L->info), seleccionarFecha (aux->info)) == TRUE)
-            {aux->sig = aux2;
-                aux2 = aux;
-                L = aux2;
-                agregada = TRUE;
-            }
-                // insfront
+          while (aux2 != NULL && !agregada)
+           {if (MenorFecha (seleccionarFecha (aux2->info), seleccionarFecha (aux->info)) == TRUE && MenorFecha (seleccionarFecha (L->info), seleccionarFecha (aux->info)) == TRUE)
+                     {aux->sig = aux2;
+                      aux2 = aux;
+                      L = aux2;
+                      agregada = TRUE;
+                      }
+            // insfront
 
             else if (MenorFecha (seleccionarFecha (aux2->info), seleccionarFecha (aux->info)) == TRUE && MenorFecha (seleccionarFecha (L->info), seleccionarFecha (aux->info)) == FALSE)
-            {L->sig = aux;
-                aux->sig = aux2;
-                agregada = TRUE;}
+                  {L->sig = aux;
+                   aux->sig = aux2;
+                    agregada = TRUE;}
 
             else aux2 = aux2->sig;
-        }
+           }
 
-        if (agregada == FALSE)
-        {
+          if (agregada == FALSE)
+            {
 
             while (aux3->sig != NULL)
             {aux3 = aux3->sig;}
@@ -173,9 +173,9 @@ void sumarConsultas (Lista &L, Consulta &c)
             aux3->sig = new nodo2;
             aux3->sig->info = c;
             aux3->sig->sig = NULL;
-        }
+            }
 
-        //InsBackIter
-    }
+            //InsBackIter
+        }
 }
 
