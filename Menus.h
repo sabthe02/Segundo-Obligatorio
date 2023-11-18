@@ -2,6 +2,7 @@
 #define MENUS_H_INCLUDED
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void menuPrincipal (int &seleccion);
 

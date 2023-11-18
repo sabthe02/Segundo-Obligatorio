@@ -3,11 +3,11 @@
 #include "Consultas.h"
 
 typedef struct {long int cedula;
-         String nombre;
-         String apellido;
-         long int telefono;
-         int cantConsultas;
-        }paciente;
+    String nombre;
+    String apellido;
+    long int telefono;
+    int cantConsultas;
+}paciente;
 
 void desplegarPaciente (paciente p);
 
@@ -25,13 +25,13 @@ int seleccionarCantConsultas (paciente p);
 
 Lista seleccionarConsultas (paciente p);
 
-//Precondición: Paciente existe
+//Precondici�n: Paciente existe
 void sumarConsulta (paciente &p);
 
 void BajarPaciente (paciente p, FILE * f); // Escribe en el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para escritura.
+// Precondici�n: El archivo viene abierto para escritura.
 
 void LevantarPaciente (paciente &p, FILE * f); // Lee desde el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para lectura.
+// Precondici�n: El archivo viene abierto para lectura.
 
 #endif // PACIENTE_H_INCLUDED

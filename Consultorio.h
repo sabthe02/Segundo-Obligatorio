@@ -4,9 +4,9 @@
 
 
 typedef struct nodoA    {paciente info;
-                        nodoA *hizq;
-                        nodoA *hder;
-                        }nodo;
+    nodoA *hizq;
+    nodoA *hder;
+}nodo;
 typedef nodo *ABB;
 
 //Crear un árbol

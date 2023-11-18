@@ -1,6 +1,6 @@
 #include "Consultas.h"
 
-void Crear(Lista &L) {
+void Crear (Lista &L) {
     L = NULL;
 }
 
@@ -39,14 +39,18 @@ Consulta LargoIter(Lista L) {
     }
     return cant;
 }
+*/
 
-void DesplegarIter(Lista L) {
-    while (L != NULL) {
-        printf("%d ", L->info);
+void DesplegarIter(Lista L)
+{
+    while (L != NULL)
+    {
+        desplegarConsulta (L->info);
         L = L->sig;
     }
 }
 
+/*
 Consulta UltimoIter(Lista L) {
     while (L->sig != NULL)
         L = L->sig;
@@ -105,9 +109,11 @@ void ParesImparesIter(Lista L, Lista &P, Lista &I) {
     }
 }
 
-void InsBackIter(Lista &L, int e) {
+
+void InsBackIter(Lista &L, Consulta c)
+{
     Lista nuevo = new nodo;
-    nuevo->info = e;
+    nuevo->info = c;
     nuevo->sig = NULL;
     if (L == NULL)
         L = nuevo;
@@ -118,24 +124,58 @@ void InsBackIter(Lista &L, int e) {
         aux->sig = nuevo;
     }
 }
-
 */
-void sumarConsultas(Lista &L, Consulta c) {
+
+void sumarConsultas (Lista &L, Consulta &c)
+{
     boolean agregada = FALSE;
-    if (L == NULL){
-        cargarConsulta(c);
-        InsFront(L, c);
-    }
+
+    Lista aux;
+    Lista aux2;
+    Lista aux3;
+
+    if (L == NULL)
+    {cargarConsulta(c);
+        InsFront(L, c);}
+
     else {
-        while (L != NULL && !agregada) {
-            if (darAnio(seleccionarFecha(c)) >= darAnio(seleccionarFecha(L->info)) &&
-                darMes(seleccionarFecha(c)) >= darMes(seleccionarFecha(L->info)) &&
-                darDia(seleccionarFecha(c)) >= darDia(seleccionarFecha(L->info))) {
-                cargarConsulta(c);
-                InsFront(L, c);
+
+        aux2 = L;
+        aux3 = L;
+
+        aux = new nodo2;
+        cargarConsulta(c);
+        aux->info = c;
+
+        while (aux2 != NULL && !agregada)
+        {if (MenorFecha (seleccionarFecha (aux2->info), seleccionarFecha (aux->info)) == TRUE && MenorFecha (seleccionarFecha (L->info), seleccionarFecha (aux->info)) == TRUE)
+            {aux->sig = aux2;
+                aux2 = aux;
+                L = aux2;
                 agregada = TRUE;
-            } else
-                L = L->sig;
+            }
+                // insfront
+
+            else if (MenorFecha (seleccionarFecha (aux2->info), seleccionarFecha (aux->info)) == TRUE && MenorFecha (seleccionarFecha (L->info), seleccionarFecha (aux->info)) == FALSE)
+            {L->sig = aux;
+                aux->sig = aux2;
+                agregada = TRUE;}
+
+            else aux2 = aux2->sig;
         }
+
+        if (agregada == FALSE)
+        {
+
+            while (aux3->sig != NULL)
+            {aux3 = aux3->sig;}
+
+            aux3->sig = new nodo2;
+            aux3->sig->info = c;
+            aux3->sig->sig = NULL;
+        }
+
+        //InsBackIter
     }
 }
+

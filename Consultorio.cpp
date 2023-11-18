@@ -3,46 +3,46 @@
 
 void Crear (ABB &a) {
 
-a = NULL;
+    a = NULL;
 
 }
 
 boolean Vacio (ABB a) {
-boolean es;
+    boolean es;
 
-if (a == NULL) {
-    es = TRUE;
-}
-else {
-    es = FALSE;
-}
-return es;
+    if (a == NULL) {
+        es = TRUE;
+    }
+    else {
+        es = FALSE;
+    }
+    return es;
 }
 
 paciente darRaiz (ABB a) {
-return a->info;
+    return a->info;
 
 }
 
 ABB HijoIzq (ABB a) {
 
-return a->hizq;
+    return a->hizq;
 
 }
 
 
 ABB HijoDer (ABB a) {
 
-return a->hder;
+    return a->hder;
 }
 
 void Insert (ABB &a, paciente valor) {
 
-if (a == NULL) {
-    a = new nodo;
-    a->info = valor;
-    a->hizq = NULL;
-    a->hder = NULL;
+    if (a == NULL) {
+        a = new nodo;
+        a->info = valor;
+        a->hizq = NULL;
+        a->hder = NULL;
     }
     else {
         if (seleccionarCedulaPaciente(valor)< seleccionarCedulaPaciente(a->info)) {
@@ -55,42 +55,44 @@ if (a == NULL) {
 
 }
 
+
+
 boolean existe (ABB a, long int cedula) {
-if (a == NULL) {
-    return FALSE;
-}
-else {
-    if (cedula == seleccionarCedulaPaciente(a->info)) {
-        return TRUE;
+    if (a == NULL) {
+        return FALSE;
     }
     else {
+        if (cedula == seleccionarCedulaPaciente(a->info)) {
+            return TRUE;
+        }
+        else {
             if (cedula < seleccionarCedulaPaciente(a->info)) {
                 return existe (a->hizq, cedula);
             }
             else {
                 return existe (a->hder, cedula);
             }
+        }
     }
-}
 
 
 }
 
 paciente Minimo (ABB a) {
     if (a -> hizq == NULL)   {
-            return (a->info);
+        return (a->info);
     }
     else {
-         return Minimo (a -> hizq); }
+        return Minimo (a -> hizq); }
 
-    }
+}
 
 void Borrar_Minimo (ABB &a) {
     ABB aux;
     if (a -> hizq == NULL) {
-            aux = a -> hder;
-            delete a;
-            a = aux;
+        aux = a -> hder;
+        delete a;
+        a = aux;
     }
     else
     {
@@ -108,85 +110,89 @@ void eliminarConCedula (long int cedula, ABB &a) {
             a = aux;
         }
         else {
-                if (a -> hizq == NULL) {
-                    aux = a -> hder;
-                    delete a;
-                    a = aux;
-                }
-                    else {
-                        a -> info = Minimo (a -> hder);
-                        Borrar_Minimo (a -> hder);
-                    }
+            if (a -> hizq == NULL) {
+                aux = a -> hder;
+                delete a;
+                a = aux;
+            }
+            else {
+                a -> info = Minimo (a -> hder);
+                Borrar_Minimo (a -> hder);
+            }
         }
     }
     else {
-            if (cedula < seleccionarCedulaPaciente(a -> info))   {
-                eliminarConCedula (cedula, a -> hizq);
-            }
-            else  {
-                eliminarConCedula (cedula, a -> hder);
-            }
+        if (cedula < seleccionarCedulaPaciente(a -> info))   {
+            eliminarConCedula (cedula, a -> hizq);
+        }
+        else  {
+            eliminarConCedula (cedula, a -> hder);
+        }
     }
 
 }
 
 void listarPacientes (ABB a) {
- if (a != NULL) {
-    listarPacientes (a->hizq);
-    desplegarPaciente (a->info);
-    listarPacientes (a->hder);
- }
+    if (a != NULL) {
+        listarPacientes (a->hizq);
+        desplegarPaciente (a->info);
+        listarPacientes (a->hder);
+    }
 
 
 }
 
 void listarPacientesSinConsultas (ABB a) {
 
-if (a !=NULL) {
-    if (seleccionarCantConsultas(a->info) == 0 ) {
-        listarPacientesSinConsultas (a->hizq);
-        desplegarPaciente (a->info);
-        listarPacientesSinConsultas (a->hder);
+    if (a !=NULL) {
+        if (seleccionarCantConsultas(a->info) == 0 ) {
+            listarPacientesSinConsultas (a->hizq);
+            desplegarPaciente (a->info);
+            listarPacientesSinConsultas (a->hder);
+        }
+        else {
+            listarPacientesSinConsultas (a->hizq);
+            listarPacientesSinConsultas (a->hder);
+        }
+
     }
-    else {
-        listarPacientesSinConsultas (a->hizq);
-        listarPacientesSinConsultas (a->hder);
-    }
+
 
 }
 
-
-}
-
+//Sumarle una consulta al paciente con la c�dula que realiz� una consulta
 void sumarConsultaAlABB (ABB &a, long int ced)
 {
-if (a != NULL )
-{
+    if (a != NULL )
     {
-         if (seleccionarCedulaPaciente (a->info) == ced)
-             sumarConsulta (a->info);
-         else
+        {
+            if (seleccionarCedulaPaciente (a->info) == ced)
+                sumarConsulta (a->info);
+            else
             {if (ced < seleccionarCedulaPaciente (a->info))
-             sumarConsultaAlABB (a->hizq, ced);
-             else sumarConsultaAlABB (a->hder, ced);
-              }
+                    sumarConsultaAlABB (a->hizq, ced);
+                else sumarConsultaAlABB (a->hder, ced);
+            }
+        }
+
+
     }
 }
-}
+
 
 int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas) {
-if (a == NULL) {
-    return 0;
-}
-else {
-    if (CaConsultas >= seleccionarCantConsultas(a->info)) {
-        return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
-
-    }
-    else {
+    if (a == NULL) {
         return 0;
     }
-}
+    else {
+        if (CaConsultas >= seleccionarCantConsultas(a->info)) {
+            return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
+
+        }
+        else {
+            return 0;
+        }
+    }
 
 }
 

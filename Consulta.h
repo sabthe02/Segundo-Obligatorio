@@ -8,7 +8,7 @@ typedef struct {
     long int cedulaEnConsulta;
     String motivo;
     Evaluacion evaluacion;
-}Consulta;
+} Consulta;
 
 void desplegarConsulta (Consulta c);
 

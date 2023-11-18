@@ -10,7 +10,7 @@ typedef struct nodoB {
 typedef nodo2 *Lista;
 
 //Crea una lista
-void Crear(Lista &L);
+void Crear (Lista &L);
 
 //Verifica si la lista esta vacia
 boolean Vacia(Lista L);
@@ -56,8 +56,8 @@ No se debe modificar la lista original.*/
 void ParesImparesIter(Lista L, Lista &P, Lista &I);
 
 //Dada una lista y un número entero, agrega dicho entero al final de la lista.
-void InsBackIter(Lista &L, int e);
+void InsBackIter(Lista &L, Consulta c);
 
-void sumarConsultas(Lista &L, Consulta c);
+void sumarConsultas(Lista &L, Consulta &c);
 
 #endif // CONSULTAS_H_INCLUDED
