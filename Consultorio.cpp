@@ -197,29 +197,29 @@ else {
 }
 
 
-//void BajarPacientes (ABB a, String nomArch) {
-//FILE *f;
-//
-//if (a != NULL) {
-//
-//BajarPacientes (a->hizq, nomArch);
-//BajarPaciente(a->info, f);
-//BajarPacientes (a->hder, nomArch);
-//}
-//
-//}
-//
-//void LevantarPacientes (ABB &a, String nomArch) {
-//FILE *f = fopen (nomArch,"rb");
-//paciente buffer;
-//
-//LevantarPaciente (buffer, f);
-//while (!feof(f)) {
-//    Insert(a, buffer);
-//    LevantarPaciente(buffer, f);
-//
-//}
-//
-//fclose(f);
-//}
+void BajarPacientes (ABB a, String nomArch) {
+FILE *f;
+
+if (a != NULL) {
+
+BajarPacientes (a->hizq, nomArch);
+BajarPaciente(a->info, f);
+BajarPacientes (a->hder, nomArch);
+}
+
+}
+
+void LevantarPacientes (ABB &a, String nomArch) {
+FILE *f = fopen (nomArch,"rb");
+paciente buffer;
+
+LevantarPaciente (buffer, f);
+while (!feof(f)) {
+    Insert(a, buffer);
+    LevantarPaciente(buffer, f);
+
+}
+
+fclose(f);
+}
 

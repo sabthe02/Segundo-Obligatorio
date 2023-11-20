@@ -108,11 +108,11 @@ void ParesImparesIter(Lista L, Lista &P, Lista &I) {
         L = L->sig;
     }
 }
-
+*/
 
 void InsBackIter(Lista &L, Consulta c)
 {
-    Lista nuevo = new nodo;
+    Lista nuevo = new nodo2;
     nuevo->info = c;
     nuevo->sig = NULL;
     if (L == NULL)
@@ -124,9 +124,9 @@ void InsBackIter(Lista &L, Consulta c)
         aux->sig = nuevo;
     }
 }
-*/
 
-void sumarConsultas (Lista &L, Consulta &c)
+
+void registrarConsulta (Lista &L, Consulta c)
 {
     boolean agregada = FALSE;
 
@@ -134,8 +134,7 @@ void sumarConsultas (Lista &L, Consulta &c)
     Lista aux2;
     Lista aux3;
 
-    if (L == NULL)
-        {cargarConsulta(c);
+    if (L == NULL){
          InsFront(L, c);}
 
     else {
@@ -179,3 +178,129 @@ void sumarConsultas (Lista &L, Consulta &c)
         }
 }
 
+void cantidadConsultasportratamiento (Lista L, int &tratamiento, int &protesis, int &saludable)
+{
+    if (L != NULL)
+    {
+        switch (seleccionarEvaluacion (L->info))
+        {
+            case EN_TRATAMIENTO: tratamiento++;
+            break;
+            case NECESITA_PROTESIS: protesis++;
+            break;
+            case SALUDABLE: saludable++;
+            break;
+        }
+
+        cantidadConsultasportratamiento (L->sig,tratamiento,protesis,saludable);
+    }
+}
+
+
+int cantidadConsultasporfecha (Lista L, fecha f)
+{
+    if (L == NULL)
+        return 0;
+    else {
+          if (darDia (seleccionarFecha (L->info)) == darDia (f) && darMes (seleccionarFecha (L->info)) == darMes (f) && darAnio (seleccionarFecha (L->info)) == darAnio (f))
+          {return 1 + cantidadConsultasporfecha (L->sig, f);}
+          else cantidadConsultasporfecha (L->sig, f);
+         }
+}
+
+
+void desplegarporcedula (Lista L, long int cedula)
+{
+    if (L != NULL)
+    {
+        if (seleccionarCedulaConsulta (L->info) == cedula)
+        {
+        desplegarConsulta (L->info);
+        desplegarporcedula (L->sig, cedula);
+        }
+        else
+            {desplegarporcedula (L->sig, cedula);}
+    }
+}
+
+
+int ContarCedulas(long int e, Lista L) {
+    int cant = 0;
+    while (L != NULL) {
+        if (seleccionarCedulaConsulta (L->info) == e)
+            cant++;
+        L = L->sig;
+    }
+    return cant;
+}
+
+
+
+void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor)
+{
+    Lista aux;
+    Lista aux2 = L;
+    int conteo = 0;
+
+    cedula = seleccionarCedulaConsulta (L->info);
+    mayor = ContarCedulas (seleccionarCedulaConsulta (L->info) , aux);
+
+    L = L->sig;
+
+    while (L != NULL)
+    {
+     if (seleccionarCedulaConsulta (L->info) == cedula)
+     {L = L->sig;}
+
+     else
+    {
+     aux = aux2;
+
+     conteo = ContarCedulas (seleccionarCedulaConsulta (L->info), aux);
+
+     if (conteo > mayor)
+     {
+         cedula = seleccionarCedulaConsulta (L->info);
+         mayor = conteo;
+         L = L->sig;
+     }
+     else
+     {
+         L = L->sig;
+     }
+
+
+    }
+
+
+}
+}
+
+// OPERACIONES DE ARCHIVOS
+
+void Bajar_Consultas (Lista L , String nomArchConsultas) {
+
+FILE * f = fopen (nomArchConsultas, "wb");
+while (L != NULL){
+    Bajar_Consulta (L -> info, f);
+    L = L -> sig;
+}
+fclose (f);
+
+}
+
+void Levantar_Consultas (Lista &L, String nomArchConsultas) {
+
+FILE * f = fopen (nomArchConsultas, "rb");
+Consulta buffer;
+Crear (L);
+Levantar_Consulta (buffer, f);
+
+while (!feof(f)) {
+    InsBackIter (L, buffer);
+    Levantar_Consulta (buffer, f);
+}
+
+fclose (f);
+
+}

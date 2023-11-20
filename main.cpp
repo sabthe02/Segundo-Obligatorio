@@ -7,17 +7,35 @@
 int main()
 {
 int selec, selecc, sele, selecci, cConsu;
-fecha f;
+fecha fe;
 paciente p;
 ABB a;
 long int cedula, ced, cedu, nume;
-Crear(a);
-//FILE *f = fopen("Pacientes.dat", "rb");
-//LevantarPacientes (a, "Pacientes.dat");
-//fclose(f);
-
 Lista L;
 Consulta c;
+String nomArchConsultas;
+
+int tratamiento = 0;
+int protesis = 0;
+int saludable = 0;
+
+long int lacedu;
+int lamayor;
+
+printf("\nINICIO PROGRAMA ");
+printf("\n");
+printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas) \n");
+strcrear(nomArchConsultas);
+scan(nomArchConsultas);
+
+FILE *f = fopen(nomArchConsultas, "rb");
+fseek(f, 0, SEEK_END);
+if (ftell(f)!=0) {
+    Levantar_Consultas(L, nomArchConsultas);
+    fclose(f);
+}
+Crear(a);
+Crear(L);
 
 do
 {
@@ -38,7 +56,8 @@ switch (selec)
                         break;
 
                         case 2: printf("\nRegistrar nueva consulta de un paciente ");
-                        sumarConsultas (L,c);
+                        cargarConsulta(c);
+                        registrarConsulta (L, c);
                         sumarConsultaAlABB (a, seleccionarCedulaConsulta (c));
                         break;
 
@@ -51,8 +70,10 @@ switch (selec)
                            eliminarConCedula (ced, a);
                            break;
                         // Ramiro poner borrar consulta
-                        case 4: printf("\nVolviendo al menu principal... \n");break;
-                        default: printf ("Opcion no valida. Ingrese otra"); break;
+                        case 4: printf("\nVolviendo al menu principal... \n");
+                        break;
+                        default: printf ("Opcion no valida. Ingrese otra");
+                        break;
                     }
                 }
                 while (selecc != 4);
@@ -74,16 +95,22 @@ switch (selec)
                         break;
                         case 3: printf("\nDada la cedula que identifica a un paciente, listar todas sus consultas, ordenadas en forma cronologica inversa ");
                                 DesplegarIter (L);
-                                // BRUNO
-                                //agregar cedula en desplegar
-                                //que quede en una linea
-                                break;
-                        // Ramiro
+                                printf("\n\nIngrese cedula de un paciente ");
+                                scanf("%ld", &ced);
+
+                                while (!existe(a, ced))
+                                {
+                                printf("\nError, paciente no existe en el sistema, ingresar otra cedula ");
+                                scanf("%ld", &ced);
+                                }
+                                desplegarporcedula (L,ced);
+                        break;
                         case 4: printf("\nDada una fecha, listar todas las consultas realizadas a partir de dicha fecha "); // Ramiro
                         break;
                         case 5: printf("\nVolviendo al menu principal...\n");
                         break;
-                        default: printf ("Opcion no valida. Ingrese otra"); break;
+                        default: printf ("Opcion no valida. Ingrese otra");
+                        break;
                     }
                 }
                 while (sele != 5);
@@ -101,29 +128,39 @@ switch (selec)
                         printf("\nCantidad de pacientes con al menos ese numero de consultas: %d", obtenerPacientesConCantidadDeConsultas(a, cConsu));
                         printf("\n");
                         break;
-                        case 2: printf("\nObtener la cantidad de consultas de cada tipo "); //BRUNO
+                        case 2: printf("\nLa cantidad de consultas de cada tipo son: ");
+                                cantidadConsultasportratamiento (L, tratamiento,protesis,saludable);//////
+                                printf ("\nEn tratamiento - %d / Protesis - %d / Saludable - %d\n",tratamiento,protesis,saludable);
+                                printf("\n");
                         break;
-                        case 3: printf("\nDada una fecha, obtener la cantidad de consultas que fueron realizadas en dicha fecha: "); //BRUNO. verificar fecha valida
-                                cargarFecha(f);
+                        case 3: printf("\nDada una fecha, obtener la cantidad de consultas que fueron realizadas en dicha fecha: ");
+                                cargarFecha(fe);
+                                printf ("La cantidad de consultas registradas para la fecha ingresada son: %d", cantidadConsultasporfecha (L,fe));
+                                printf("\n");
                         break;
-                        case 4: printf("\nObtener la cedula del paciente que ha realizado la mayor cantidad de consultas hasta el momento, junto con la cantidad de consultas correspondiente "); //BRUNO.
+                        case 4: printf("\nObtener la cedula del paciente que ha realizado la mayor cantidad de consultas hasta el momento, junto con la cantidad de consultas correspondiente ");
+                                mayorcantidadconsultas (L, lacedu, lamayor);
+                                printf ("Cedula %ld - Cantidad consultas %d", lacedu, lamayor);
+                                printf("\n");
                         break;
                         case 5: printf("\nVolviendo al menu principal...\n");
                         break;
-                        default: printf ("Opcion no valida. Ingrese otra"); break;
+                        default: printf ("Opcion no valida. Ingrese otra");
+                        break;
                     }
                 }
                 while (selecci != 5);
                 //system("cls");
                 break;
 
-        case 4: printf("\nSaliendo..."); break;
+        case 4: printf("\nSaliendo...");
+        break;
 
-        default: printf ("Opcion no valida. Ingrese otra"); break;
-//                FILE *f = fopen ("Pacientes.dat", "wb");
-//                BajarPacientes(a, "Pacientes.dat");
-//                fclose(f);
-
+        default: printf ("Opcion no valida. Ingrese otra");
+                f = fopen (nomArchConsultas, "wb");
+                BajarPacientes(a, nomArchConsultas);
+                fclose(f);
+        break;
 }
 
 } while (selec != 4);

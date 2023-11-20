@@ -58,6 +58,35 @@ void ParesImparesIter(Lista L, Lista &P, Lista &I);
 //Dada una lista y un número entero, agrega dicho entero al final de la lista.
 void InsBackIter(Lista &L, Consulta c);
 
-void sumarConsultas(Lista &L, Consulta &c);
+//Registrar la realización de una nueva consulta hecha por un paciente.
+// Se debe verificar previamente que la cédula de dicho paciente exista en el sistema y que la fecha de la nueva consulta sea válida
+// e igual o posterior a la fecha de la última consulta registrada hasta el momento en el sistema.
+void registrarConsulta (Lista &L, Consulta c);
+
+//-----
+// Obtener la cantidad de consultas de cada tipo
+void cantidadConsultasportratamiento (Lista L, int &tratamiento, int &protesis, int &saludable);
+
+// Dada una fecha, obtener la cantidad de consultas que fueron realizadas en dicha fecha: ")
+int cantidadConsultasporfecha (Lista L, fecha f);
+
+// desplegar consultas por cedula
+void desplegarporcedula (Lista L, long int cedula);
+
+// Obtener la cedula del paciente que ha realizado la mayor cantidad de consultas hasta el momento, junto con la cantidad de consultas correspondiente
+//PRECONDICION - inicializar variables
+void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor);
+
+/*Dada una lista y un número de cedula, devuelve la cantidad de veces que dicho
+cedula aparece en la lista.*/
+int ContarCedulas (long int e, Lista L);
+
+//OPERACIONES DE ARCHIVOS
+
+//Bajar Lista a un archivo
+void Bajar_Consultas(Lista L , String nomArch);
+
+//Subir lista a memoria
+void Levantar_Consultas (Lista &L, String nomArch);
 
 #endif // CONSULTAS_H_INCLUDED

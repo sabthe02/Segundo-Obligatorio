@@ -18,7 +18,6 @@ void menuAltasYBajas (int &seleccion) {
     printf("\n 3. Registrar baja de un paciente");
     printf("\n 4. Ir a menu principal");
     printf("\n");
-
     scanf("%d", &seleccion);
     }
 

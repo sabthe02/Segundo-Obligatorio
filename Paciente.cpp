@@ -61,7 +61,9 @@ fwrite(&p.cantConsultas, sizeof(int), 1, f);
 void LevantarPaciente (paciente &p, FILE * f) {
 
 fread(&p.cedula, sizeof(long int), 1, f);
+strcrear (p.nombre);
 Levantar_String (p.nombre, f);
+strcrear (p.apellido);
 Levantar_String (p.apellido, f);
 fread(&p.telefono, sizeof(long int), 1, f);
 fread(&p.cantConsultas, sizeof(int), 1, f);

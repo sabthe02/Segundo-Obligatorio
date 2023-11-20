@@ -47,8 +47,10 @@ boolean existe (ABB a, long int cedula);
 // Se debe verificar previamente que dicha cédula exista en el sistema.
 //También se deben eliminar del sistema todas las consultas realizadas por dicho paciente.
 
+//Determina paciente con menor cédula
 paciente Minimo (ABB a);
 
+//Borra del ABB paciente con menor cédula
 void Borrar_Minimo (ABB &a);
 
 //Dada la cédula que identifica a un paciente, eliminar dicho paciente del sistema.

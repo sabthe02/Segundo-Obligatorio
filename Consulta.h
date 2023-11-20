@@ -22,4 +22,9 @@ String seleccionarMotivo (Consulta c);
 
 Evaluacion seleccionarEvaluacion (Consulta c);
 
+// Operaciones de archivos
+void Bajar_Consulta (Consulta c, FILE * f);
+
+void Levantar_Consulta (Consulta &c, FILE * f);
+
 #endif // CONSULTA_H_INCLUDED
