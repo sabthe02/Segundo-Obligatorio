@@ -1,10 +1,14 @@
 #include "Consulta.h"
 
 void desplegarConsulta(Consulta c) {
+    printf("Fecha: ");
     desplegarFecha(c.fec);
-    printf("Cedula de la consulta: %ld\n\n", c.cedulaEnConsulta);
+    printf(" | Cedula de la consulta: %ld | ", c.cedulaEnConsulta);
+    printf("Motivo de la consulta: ");
     print(c.motivo);
+    printf(" | Evaluacion: ");
     desplegarEvaluacion(c.evaluacion);
+    printf("\n");
 }
 
 void cargarConsulta(Consulta &c) {

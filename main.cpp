@@ -6,6 +6,7 @@
 
 int main()
 {
+
 int selec, selecc, sele, selecci, cConsu;
 fecha fe;
 paciente p;
@@ -22,11 +23,16 @@ int saludable = 0;
 long int lacedu;
 int lamayor;
 
+Crear(a);
+Crear(L);
+
+/*
 printf("\nINICIO PROGRAMA ");
 printf("\n");
 printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas) \n");
 strcrear(nomArchConsultas);
 scan(nomArchConsultas);
+
 
 FILE *f = fopen(nomArchConsultas, "rb");
 fseek(f, 0, SEEK_END);
@@ -34,8 +40,8 @@ if (ftell(f)!=0) {
     Levantar_Consultas(L, nomArchConsultas);
     fclose(f);
 }
-Crear(a);
-Crear(L);
+
+*/
 
 do
 {
@@ -49,12 +55,11 @@ switch (selec)
                     {
                         case 1: printf("\nRegistrar alta de un paciente");
                         cargarPaciente(p);
-                        while (existe(a, seleccionarCedulaPaciente(p))) {
-                            printf("\nError, paciente ya existe, ingresar otra cedula ");
+                        if (existe(a, seleccionarCedulaPaciente(p))) {
+                            printf("\nError, paciente ya existe.");
                         }
-                        Insert(a, p);
+                        else Insert(a, p);
                         break;
-
                         case 2: printf("\nRegistrar nueva consulta de un paciente ");
                         cargarConsulta(c);
                         registrarConsulta (L, c);
@@ -64,12 +69,13 @@ switch (selec)
                         case 3: printf("\nRegistrar baja de un paciente ");
                         printf("\nIngrese cedula de un paciente para borrarlo del sistema: ");
                         scanf("%ld", &ced);
-                        while (!existe(a, ced)) {
-                            printf("\nError, paciente no existe en el sistema, ingresar otra cedula ");
-                            scanf("%ld", &ced);}
-                           eliminarConCedula (ced, a);
-                           break;
-                        // Ramiro poner borrar consulta
+                        if (!existe(a, ced)) {
+                            printf("\nError, paciente no existe en el sistema.");
+                        } else {eliminarConCedula (ced, a);
+                          printf("\nEliminado correctamente.");
+                          eliminarConsulta (L, ced);
+                          }
+                        break;
                         case 4: printf("\nVolviendo al menu principal... \n");
                         break;
                         default: printf ("Opcion no valida. Ingrese otra");
@@ -94,18 +100,19 @@ switch (selec)
                         printf("\n");
                         break;
                         case 3: printf("\nDada la cedula que identifica a un paciente, listar todas sus consultas, ordenadas en forma cronologica inversa ");
-                                DesplegarIter (L);
+
                                 printf("\n\nIngrese cedula de un paciente ");
                                 scanf("%ld", &ced);
 
-                                while (!existe(a, ced))
+                                if (!existe(a, ced))
                                 {
-                                printf("\nError, paciente no existe en el sistema, ingresar otra cedula ");
-                                scanf("%ld", &ced);
-                                }
+                                printf("\nError, paciente no existe en el sistema. Registrelo primero ");
+                                }else
                                 desplegarporcedula (L,ced);
                         break;
-                        case 4: printf("\nDada una fecha, listar todas las consultas realizadas a partir de dicha fecha "); // Ramiro
+                        case 4: printf("\nDada una fecha, listar todas las consultas realizadas a partir de dicha fecha ");
+                        cargarFecha (fe);
+                        desplegarConsultaPorFecha (L,fe);
                         break;
                         case 5: printf("\nVolviendo al menu principal...\n");
                         break;
@@ -129,7 +136,7 @@ switch (selec)
                         printf("\n");
                         break;
                         case 2: printf("\nLa cantidad de consultas de cada tipo son: ");
-                                cantidadConsultasportratamiento (L, tratamiento,protesis,saludable);//////
+                                cantidadConsultasportratamiento (L, tratamiento,protesis,saludable);
                                 printf ("\nEn tratamiento - %d / Protesis - %d / Saludable - %d\n",tratamiento,protesis,saludable);
                                 printf("\n");
                         break;
@@ -157,9 +164,11 @@ switch (selec)
         break;
 
         default: printf ("Opcion no valida. Ingrese otra");
+                /*
                 f = fopen (nomArchConsultas, "wb");
                 BajarPacientes(a, nomArchConsultas);
                 fclose(f);
+                */
         break;
 }
 

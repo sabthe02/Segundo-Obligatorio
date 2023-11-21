@@ -143,7 +143,6 @@ void registrarConsulta (Lista &L, Consulta c)
           aux3 = L;
 
           aux = new nodo2;
-          cargarConsulta(c);
           aux->info = c;
 
           while (aux2 != NULL && !agregada)
@@ -238,7 +237,7 @@ int ContarCedulas(long int e, Lista L) {
 
 void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor)
 {
-    Lista aux;
+    Lista aux = L;
     Lista aux2 = L;
     int conteo = 0;
 
@@ -275,6 +274,34 @@ void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor)
 
 }
 }
+
+void eliminarConsulta(Lista &L, long int cedula){
+    if (L != NULL)
+    {
+        if (cedula == seleccionarCedulaConsulta(L->info))
+        {
+            Lista aux = L;
+            L = L -> sig;
+            delete aux;
+            eliminarConsulta(L, cedula);
+        }
+        else
+            eliminarConsulta(L -> sig, cedula);
+    }
+
+}
+
+void desplegarConsultaPorFecha(Lista L, fecha f){
+    if (L != NULL) {
+        if (darDia(seleccionarFecha(L->info)) >= darDia(f) && darMes(seleccionarFecha(L->info)) >= darMes(f) &&
+            darAnio(seleccionarFecha(L->info)) >= darAnio(f)){
+            desplegarConsulta(L->info);
+            desplegarConsultaPorFecha(L->sig, f);
+        } else desplegarConsultaPorFecha(L->sig, f);
+    }
+}
+
+
 
 // OPERACIONES DE ARCHIVOS
 

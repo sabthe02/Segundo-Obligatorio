@@ -81,6 +81,13 @@ void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor);
 cedula aparece en la lista.*/
 int ContarCedulas (long int e, Lista L);
 
+//elimina consulta
+void eliminarConsulta(Lista &L, long int cedula);
+
+//desplegar consulta por fecha
+//PRECONDICIÓN: la cédula debe existir
+void desplegarConsultaPorFecha(Lista L, fecha f);
+
 //OPERACIONES DE ARCHIVOS
 
 //Bajar Lista a un archivo

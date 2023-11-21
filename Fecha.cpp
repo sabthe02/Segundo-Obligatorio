@@ -15,7 +15,7 @@ void cargarFecha (fecha &f)
 }
 
 void desplegarFecha(fecha f) {
-printf("%d %d %d\n", f.dia, f.mes, f.anio);
+printf("%d %d %d", f.dia, f.mes, f.anio);
 }
 
 int darDia (fecha f) {

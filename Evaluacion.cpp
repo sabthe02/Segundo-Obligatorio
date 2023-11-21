@@ -15,7 +15,7 @@ void cargarEvaluacion (Evaluacion &e) {
 int a;
 
 while (a != 1 && a!= 2 && a != 3) {
-    printf("\nIngrese tipo de evaluacion: 1 - En tratamiento, 2 - Necesita protesis, 3 - Saludable");
+    printf("\nIngrese tipo de evaluacion: 1 - En tratamiento, 2 - Necesita protesis, 3 - Saludable: ");
     scanf("%d", &a);
 
     switch(a) {
