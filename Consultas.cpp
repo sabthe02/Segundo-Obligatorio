@@ -307,17 +307,17 @@ void desplegarConsultaPorFecha(Lista L, fecha f){
 
 
 void Bajar_Consultas (Lista L , String nomArchConsultas) {
-FILE * f;
+FILE * f = fopen(nomArchConsultas, "wb");
 while (L != NULL){
     Bajar_Consulta (L -> info, f);
     L = L -> sig;
 }
-
+fclose(f);
 }
 
 void Levantar_Consultas (Lista &L, String nomArchConsultas) {
 printf("\nEntra en Levantar Consultas");
-FILE * f;
+FILE * f = fopen(nomArchConsultas, "rb");
 Consulta buffer;
 Crear (L);
   printf("\nCrea L"); // Hasta acá llega
@@ -332,6 +332,6 @@ while (!feof(f)) {
     Levantar_Consulta (buffer, f);
 }
 
-//fclose (f);
+fclose (f);
 
 }

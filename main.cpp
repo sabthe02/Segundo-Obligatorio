@@ -25,29 +25,58 @@ int lamayor;
 
 Crear(a);
 Crear(L);
-
-printf("\nINICIO PROGRAMA ");
-printf("\n");
-printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas.txt) \n");
-strcrear(nomArchConsultas);
-scan(nomArchConsultas);
-
-printf("\nIngrese nombre del archivo del cual quiere levantar los Pacientes (Pacientes.txt) \n");
-strcrear(nomArchPacientes);
-scan(nomArchPacientes);
-
 FILE *f, *f2;
-f = fopen("Consultas.txt", "rb");
-if (f != NULL ) {
-    Levantar_Consultas(L, nomArchConsultas); // Se cuelga en alg¿un punto acá
-    fclose(f);
-}
 
-f2 = fopen ("Pacientes.txt", "rb");
-if (f2 != NULL ) {
-    LevantarPacientes(a, nomArchPacientes);
-    fclose(f2);
-}
+/*
+printf("\nINICIO PROGRAMA ");
+    printf("\n");
+    printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas.txt) \n");
+    strcrear(nomArchConsultas);
+    scan(nomArchConsultas);
+
+    printf("\nIngrese nombre del archivo del cual quiere levantar los Pacientes (Pacientes.txt) \n");
+    strcrear(nomArchPacientes);
+    scan(nomArchPacientes);
+
+
+nomArchConsultas = new char [14];
+nomArchConsultas [0] = 'C';
+nomArchConsultas [1] = 'o';
+nomArchConsultas [2] = 'n';
+nomArchConsultas [3] = 's';
+nomArchConsultas [4] = 'u';
+nomArchConsultas [5] = 'l';
+nomArchConsultas [6] = 't';
+nomArchConsultas [7] = 'a';
+nomArchConsultas [8] = 's';
+nomArchConsultas [9] = '.';
+nomArchConsultas [10] = 't';
+nomArchConsultas [11] = 'x';
+nomArchConsultas [12] = 't';
+nomArchConsultas [13] = '\0';
+
+nomArchPacientes = new char [14];
+nomArchPacientes [0] = 'P';
+nomArchPacientes [1] = 'a';
+nomArchPacientes [2] = 'c';
+nomArchPacientes [3] = 'i';
+nomArchPacientes [4] = 'e';
+nomArchPacientes [5] = 'n';
+nomArchPacientes [6] = 't';
+nomArchPacientes [7] = 'e';
+nomArchPacientes [8] = 's';
+nomArchPacientes [9] = '.';
+nomArchPacientes [10] = 't';
+nomArchPacientes [11] = 'x';
+nomArchPacientes [12] = 't';
+nomArchPacientes [13] = '\0';
+*/
+
+if (L != NULL )
+{Levantar_Consultas(L, nomArchConsultas);}
+
+if (a != NULL )
+{LevantarPacientes(a, nomArchPacientes);}
 
 do
 {
@@ -167,9 +196,7 @@ switch (selec)
                 break;
 
         case 4: printf("\nSaliendo...");
-        f = fopen("Consultas.txt", "wb");
         Bajar_Consultas(L, nomArchConsultas);
-        fclose(f);
         f2 = fopen("Pacientes.txt", "wb");
         BajarPacientes(a, f2);
         fclose(f2);

@@ -194,3 +194,68 @@
 	"Consultorio.h"
 	"Consultas.h"
 
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\boolean.cpp
+	"Boolean.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\boolean.h
+	<stdio.h>
+
+1700603857 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consulta.cpp
+	"Consulta.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consulta.h
+	"Fecha.h"
+	"Evaluacion.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\fecha.h
+	"String.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\string.h
+	<stdio.h>
+	"Boolean.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\evaluacion.h
+	<stdio.h>
+
+1700609853 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consultas.cpp
+	"Consultas.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consultas.h
+	"Consulta.h"
+
+1700607943 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consultorio.cpp
+	"Consultorio.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\consultorio.h
+	"Paciente.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\paciente.h
+	"Consultas.h"
+
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\evaluacion.cpp
+	"Evaluacion.h"
+
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\fecha.cpp
+	"Fecha.h"
+	"Boolean.h"
+
+1700609858 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\main.cpp
+	"Menus.h"
+	"Paciente.h"
+	"Consulta.h"
+	"Consultorio.h"
+	"Consultas.h"
+
+1700601018 c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\menus.h
+	<stdio.h>
+	<stdlib.h>
+
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\menus.cpp
+	"Menus.h"
+
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\paciente.cpp
+	"Paciente.h"
+
+1700601018 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio\string.cpp
+	"String.h"
+

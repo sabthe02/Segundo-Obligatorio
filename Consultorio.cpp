@@ -209,16 +209,18 @@ BajarPacientes (a->hder, f);
 }
 
 void LevantarPacientes (ABB &a, String nomArchPacientes) {
-FILE *f;
+FILE *f2 = fopen(nomArchPacientes, "rb");
 paciente buffer;
 Crear(a);
 
-LevantarPaciente (buffer, f);
-while (!feof(f)) {
+LevantarPaciente (buffer, f2);
+while (!feof(f2)) {
     Insert(a, buffer);
-    LevantarPaciente(buffer, f);
+    LevantarPaciente(buffer, f2);
 
 }
+
+fclose (f2);
 
 }
 
