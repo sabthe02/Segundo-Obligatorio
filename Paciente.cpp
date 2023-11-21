@@ -60,6 +60,7 @@ fwrite(&p.cantConsultas, sizeof(int), 1, f);
 
 void LevantarPaciente (paciente &p, FILE * f) {
 
+printf("\nEntra a Levantar Paciente");
 fread(&p.cedula, sizeof(long int), 1, f);
 strcrear (p.nombre);
 Levantar_String (p.nombre, f);

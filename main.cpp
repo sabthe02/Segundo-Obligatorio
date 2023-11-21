@@ -11,10 +11,10 @@ int selec, selecc, sele, selecci, cConsu;
 fecha fe;
 paciente p;
 ABB a;
-long int cedula, ced, cedu, nume;
+long int ced;
 Lista L;
 Consulta c;
-String nomArchConsultas;
+String nomArchConsultas, nomArchPacientes;
 
 int tratamiento = 0;
 int protesis = 0;
@@ -26,22 +26,28 @@ int lamayor;
 Crear(a);
 Crear(L);
 
-/*
 printf("\nINICIO PROGRAMA ");
 printf("\n");
-printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas) \n");
+printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas.txt) \n");
 strcrear(nomArchConsultas);
 scan(nomArchConsultas);
 
+printf("\nIngrese nombre del archivo del cual quiere levantar los Pacientes (Pacientes.txt) \n");
+strcrear(nomArchPacientes);
+scan(nomArchPacientes);
 
-FILE *f = fopen(nomArchConsultas, "rb");
-fseek(f, 0, SEEK_END);
-if (ftell(f)!=0) {
-    Levantar_Consultas(L, nomArchConsultas);
+FILE *f, *f2;
+f = fopen("Consultas.txt", "rb");
+if (f != NULL ) {
+    Levantar_Consultas(L, nomArchConsultas); // Se cuelga en alg¿un punto acá
     fclose(f);
 }
 
-*/
+f2 = fopen ("Pacientes.txt", "rb");
+if (f2 != NULL ) {
+    LevantarPacientes(a, nomArchPacientes);
+    fclose(f2);
+}
 
 do
 {
@@ -53,7 +59,7 @@ switch (selec)
                 menuAltasYBajas (selecc);
                     switch (selecc)
                     {
-                        case 1: printf("\nRegistrar alta de un paciente");
+                        case 1: printf("\nRegistrar alta de un paciente ");
                         cargarPaciente(p);
                         if (existe(a, seleccionarCedulaPaciente(p))) {
                             printf("\nError, paciente ya existe.");
@@ -161,14 +167,15 @@ switch (selec)
                 break;
 
         case 4: printf("\nSaliendo...");
+        f = fopen("Consultas.txt", "wb");
+        Bajar_Consultas(L, nomArchConsultas);
+        fclose(f);
+        f2 = fopen("Pacientes.txt", "wb");
+        BajarPacientes(a, f2);
+        fclose(f2);
+        // Recordar liberar listas, arboles y strings
         break;
-
         default: printf ("Opcion no valida. Ingrese otra");
-                /*
-                f = fopen (nomArchConsultas, "wb");
-                BajarPacientes(a, nomArchConsultas);
-                fclose(f);
-                */
         break;
 }
 

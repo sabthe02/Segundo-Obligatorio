@@ -203,7 +203,7 @@ int cantidadConsultasporfecha (Lista L, fecha f)
     else {
           if (darDia (seleccionarFecha (L->info)) == darDia (f) && darMes (seleccionarFecha (L->info)) == darMes (f) && darAnio (seleccionarFecha (L->info)) == darAnio (f))
           {return 1 + cantidadConsultasporfecha (L->sig, f);}
-          else cantidadConsultasporfecha (L->sig, f);
+          else return cantidadConsultasporfecha (L->sig, f);
          }
 }
 
@@ -305,29 +305,33 @@ void desplegarConsultaPorFecha(Lista L, fecha f){
 
 // OPERACIONES DE ARCHIVOS
 
-void Bajar_Consultas (Lista L , String nomArchConsultas) {
 
-FILE * f = fopen (nomArchConsultas, "wb");
+void Bajar_Consultas (Lista L , String nomArchConsultas) {
+FILE * f;
 while (L != NULL){
     Bajar_Consulta (L -> info, f);
     L = L -> sig;
 }
-fclose (f);
 
 }
 
 void Levantar_Consultas (Lista &L, String nomArchConsultas) {
-
-FILE * f = fopen (nomArchConsultas, "rb");
+printf("\nEntra en Levantar Consultas");
+FILE * f;
 Consulta buffer;
 Crear (L);
-Levantar_Consulta (buffer, f);
+  printf("\nCrea L"); // Hasta acá llega
+
+Levantar_Consulta (buffer, f); // Acá se cuelga
+printf("\nLevanta primera consulta");
 
 while (!feof(f)) {
+        printf("\nEntra en while levantar");
     InsBackIter (L, buffer);
+    printf("\nInsertó consulta en Lista");
     Levantar_Consulta (buffer, f);
 }
 
-fclose (f);
+//fclose (f);
 
 }

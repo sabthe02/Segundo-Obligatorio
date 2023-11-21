@@ -18,6 +18,7 @@ void cargarConsulta(Consulta &c) {
     fflush(stdin);
     printf("\nIngrese el motivo de la consulta: ");
     fflush (stdin);
+    strcrear(c.motivo);
     scan(c.motivo);
     printf("\nIngrese la evaluacion de la consulta: ");
     cargarEvaluacion(c.evaluacion);

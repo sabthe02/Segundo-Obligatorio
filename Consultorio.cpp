@@ -197,21 +197,21 @@ else {
 }
 
 
-void BajarPacientes (ABB a, String nomArch) {
-FILE *f;
+void BajarPacientes (ABB a, FILE *f) {
 
 if (a != NULL) {
 
-BajarPacientes (a->hizq, nomArch);
 BajarPaciente(a->info, f);
-BajarPacientes (a->hder, nomArch);
+BajarPacientes (a->hizq, f);
+BajarPacientes (a->hder, f);
 }
 
 }
 
-void LevantarPacientes (ABB &a, String nomArch) {
-FILE *f = fopen (nomArch,"rb");
+void LevantarPacientes (ABB &a, String nomArchPacientes) {
+FILE *f;
 paciente buffer;
+Crear(a);
 
 LevantarPaciente (buffer, f);
 while (!feof(f)) {
@@ -220,6 +220,5 @@ while (!feof(f)) {
 
 }
 
-fclose(f);
 }
 

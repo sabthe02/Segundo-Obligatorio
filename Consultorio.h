@@ -60,11 +60,11 @@ void Borrar_Minimo (ABB &a);
 void eliminarConCedula (long int cedula, ABB &a);
 
 //
-void BajarPacientes (ABB a, String nomArch);
+void BajarPacientes (ABB a, FILE *f);
 //Guardar información de todos los pacientes en archivo
 //Precondicion: Archivo viene abierto en modo escritura
 
-void LevantarPacientes (ABB &a, String nomArch);
+void LevantarPacientes (ABB &a, String nomArchPacientes);
 //Subir información de todos los pacientes desde archivo
 
 void listarPacientes (ABB a);
