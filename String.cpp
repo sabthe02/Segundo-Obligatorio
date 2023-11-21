@@ -32,19 +32,21 @@ void print (String s)
 }
 }
 
-void scan (String &s)
-{
-int i = 0;
-char c;
-scanf ("%c",&c);
-while ((c != '\n') && (i < MAX - 1))
-{
-s[i] = c;
-i++;
-scanf("%c",&c);
+void scan (String &s){
+    String aux = new char[MAX];
+    int i=0; char c;
+    fflush (stdin);
+    scanf ("%c", &c);
+
+    while (c!= '\n' && i < MAX-1) {
+        aux[i] = c;
+        i++; scanf ("%c", &c);
+    }
+    aux[i] = '\0';
+    strcop (s,aux);
+    strdestruir (aux);
 }
-s[i] = '\0';
-}
+
 
 boolean strmen (String s1, String s2)
 {
