@@ -88,5 +88,7 @@ void eliminarConsulta(Lista &L, long int cedula);
 //PRECONDICIÓN: la cédula debe existir
 void desplegarConsultaPorFecha(Lista L, fecha f);
 
+//liberar memoria otorgada para Lista
+void liberarMemoriaLista(Lista &L);
 
 #endif // CONSULTAS_H_INCLUDED

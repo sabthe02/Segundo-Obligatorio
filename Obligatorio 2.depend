@@ -283,3 +283,80 @@
 	"Consultorio.h"
 	"Consultorio.h"
 
+1700686623 source:c:\users\ramiro\documents\github\segundo-obligatorio\archivo.cpp
+	"Archivo.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\archivo.h
+	"String.h"
+	"Boolean.h"
+	"Consulta.h"
+	"Consultas.h"
+	"Consultorio.h"
+	"Consultorio.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\string.h
+	<stdio.h>
+	"Boolean.h"
+
+1700665239 c:\users\ramiro\documents\github\segundo-obligatorio\boolean.h
+	<stdio.h>
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\consulta.h
+	"Fecha.h"
+	"Evaluacion.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\fecha.h
+	"String.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\evaluacion.h
+	<stdio.h>
+
+1700686778 c:\users\ramiro\documents\github\segundo-obligatorio\consultas.h
+	"Consulta.h"
+
+1700686778 c:\users\ramiro\documents\github\segundo-obligatorio\consultorio.h
+	"Paciente.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\paciente.h
+	"Consultas.h"
+
+1700523058 source:c:\users\ramiro\documents\github\segundo-obligatorio\boolean.cpp
+	"Boolean.h"
+
+1700665236 source:c:\users\ramiro\documents\github\segundo-obligatorio\evaluacion.cpp
+	"Evaluacion.h"
+
+1700687111 source:c:\users\ramiro\documents\github\segundo-obligatorio\main.cpp
+	"Menus.h"
+	"Paciente.h"
+	"Consulta.h"
+	"Consultorio.h"
+	"Consultas.h"
+	"Archivo.h"
+
+1700686623 c:\users\ramiro\documents\github\segundo-obligatorio\menus.h
+	<stdio.h>
+	<stdlib.h>
+
+1700665236 source:c:\users\ramiro\documents\github\segundo-obligatorio\menus.cpp
+	"Menus.h"
+
+1700686623 source:c:\users\ramiro\documents\github\segundo-obligatorio\consulta.cpp
+	"Consulta.h"
+
+1700686740 source:c:\users\ramiro\documents\github\segundo-obligatorio\fecha.cpp
+	"Fecha.h"
+	"Boolean.h"
+
+1700686623 source:c:\users\ramiro\documents\github\segundo-obligatorio\string.cpp
+	"String.h"
+
+1700686740 source:c:\users\ramiro\documents\github\segundo-obligatorio\consultas.cpp
+	"Consultas.h"
+
+1700686740 source:c:\users\ramiro\documents\github\segundo-obligatorio\consultorio.cpp
+	"Consultorio.h"
+
+1700686623 source:c:\users\ramiro\documents\github\segundo-obligatorio\paciente.cpp
+	"Paciente.h"
+

@@ -5,8 +5,12 @@ void cargarFecha (fecha &f)
 {
     boolean es = FALSE;
     while (!es) {
-        printf("\nIngrese un numero entero para dia, mes y anio de ingreso: ");
-        scanf("%d %d %d", &f.dia, &f.mes, &f.anio);
+         printf("\nIngrese un numero entero para dia: ");
+        scanf("%d", &f.dia);
+        printf("\nIngrese un numero entero para mes: ");
+        scanf("%d", &f.mes);
+        printf("\nIngrese un numero entero para anio: ");
+        scanf("%d", &f.anio);
         es = validarFecha(f);
         if (!es) {
             printf("\nPor favor ingresar fecha valida");

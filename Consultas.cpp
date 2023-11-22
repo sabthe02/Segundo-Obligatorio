@@ -233,3 +233,12 @@ void desplegarConsultaPorFecha(Lista L, fecha f){
     }
 }
 
+void liberarMemoriaLista(Lista &L)
+{
+    while (L != NULL)
+    {
+        Lista lista = L;
+        L = L->sig;
+        delete lista;
+    }
+}

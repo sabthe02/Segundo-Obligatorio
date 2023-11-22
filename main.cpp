@@ -157,7 +157,10 @@ switch (selec)
         f2 = fopen("Pacientes.txt", "wb");
         BajarPacientes(a, f2);
         fclose(f2);
-        // Recordar liberar listas, arboles y strings
+        liberarArbol(a);
+        liberarMemoriaLista(L);
+        strdestruir(nomArchConsultas);
+        strdestruir(nomArchPacientes);
         break;
         default: printf ("Opcion no valida. Ingrese otra");
         break;

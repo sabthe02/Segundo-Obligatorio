@@ -76,5 +76,7 @@ void sumarConsultaAlABB (ABB &a, long int ced);
 //hasta el momento.
 int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
 
+//liberar memoria otorgada para Arboles
+void liberarArbol(ABB &a);
 
 #endif // CONSULTORIO_H_INCLUDED

@@ -196,4 +196,14 @@ else {
 
 }
 
+void liberarArbol(ABB &a)
+{
+    if (a != NULL)
+    {
+        liberarArbol(a->hizq);
+        liberarArbol(a->hder);
+        delete a;
+    }
+}
+
 
