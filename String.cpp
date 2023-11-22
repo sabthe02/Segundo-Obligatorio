@@ -133,31 +133,3 @@ void strswp (String &s1,String &s2)
  s2 = aux;
 
 }
-
-/*
-void Bajar_String (String s, FILE * f){
-int i =0;
-
-while (s[i]!='\0' && (!feof(f))) {
-    fwrite(&s[i], sizeof(char),1, f);
-    i++;
-}
-fwrite(&s[i], sizeof(char),1, f);
-
-}
-
-void Levantar_String (String &s, FILE * f) {
-int i = 0;
-String aux;
-aux = new char [MAX];
-
-fread(&aux[i], sizeof(char), 1, f);
-
-while (aux[i]!='\0' && (!feof(f))) {
-    i++;
-    fread(&aux[i], sizeof(char), 1, f);
-}
-strcop(s, aux);
-delete []aux;
-}
-*/

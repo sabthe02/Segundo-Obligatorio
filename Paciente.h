@@ -9,29 +9,30 @@ typedef struct {long int cedula;
          int cantConsultas;
         }paciente;
 
+// Desplegar paciente
 void desplegarPaciente (paciente p);
 
+// Cargar paciente
 void cargarPaciente (paciente &p);
 
+// Selectora cédula del paciente
 long int seleccionarCedulaPaciente (paciente p);
 
+// Selectora nombre del paciente
 String seleccionarNombre (paciente p);
 
+// Selectora apellido del paciente
 String seleccionarApellido (paciente p);
 
+// Selectora teléfono del paciente
 long int seleccionarTelefono (paciente p);
 
+// Selectora cantidad de consultas del paciente
 int seleccionarCantConsultas (paciente p);
 
-Lista seleccionarConsultas (paciente p);
-
+// Sumar consulta
 //Precondición: Paciente existe
 void sumarConsulta (paciente &p);
 
-//void BajarPaciente (paciente p, FILE * f); // Escribe en el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para escritura.
-
-//void LevantarPaciente (paciente &p, FILE * f); // Lee desde el archivo los datos del paciente p.
-// Precondición: El archivo viene abierto para lectura.
 
 #endif // PACIENTE_H_INCLUDED

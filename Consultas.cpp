@@ -30,16 +30,6 @@ void InsFront(Lista &L, Consulta e) {
     L = aux;
 }
 
-/*
-Consulta LargoIter(Lista L) {
-    int cant = 0;
-    while (L != NULL) {
-        cant++;
-        L = L->sig;
-    }
-    return cant;
-}
-*/
 
 void DesplegarIter(Lista L)
 {
@@ -50,65 +40,7 @@ void DesplegarIter(Lista L)
     }
 }
 
-/*
-Consulta UltimoIter(Lista L) {
-    while (L->sig != NULL)
-        L = L->sig;
-    return (L->info);
-}
 
-Consulta ContarIter(int e, Lista L) {
-    int cant = 0;
-    while (L != NULL) {
-        if (L->info == e)
-            cant++;
-        L = L->sig;
-    }
-    return cant;
-}
-
-boolean PerteneceIter(Lista L, int e) {
-    boolean esta = FALSE;
-    while (L != NULL && !esta) {
-        if (L->info == e)
-            esta = TRUE;
-        else
-            L = L->sig;
-    }
-    return esta;
-}
-
-void SustituirIter(Lista &L, int e1, int e2) {
-    Lista aux = L;
-    while (aux != NULL) {
-        if (aux->info == e1)
-            aux->info = e2;
-        aux = aux->sig;
-    }
-}
-
-Consulta MaximoIter(Lista L) // Precondición: L no está vacía
-{
-    Consulta max = L->info;
-    L = L->sig;
-    while (L != NULL) {
-        if (L->info > max)
-            max = L->info;
-        L = L->sig;
-    }
-    return max;
-}
-
-void ParesImparesIter(Lista L, Lista &P, Lista &I) {
-    while (L != NULL) {
-        if (L->info % 2 == 0)
-            InsFront(P, L->info);
-        else
-            InsFront(I, L->info);
-        L = L->sig;
-    }
-}
-*/
 
 void InsBackIter(Lista &L, Consulta c)
 {
@@ -301,49 +233,3 @@ void desplegarConsultaPorFecha(Lista L, fecha f){
     }
 }
 
-
-/*
-OPERACIONES DE ARCHIVOS
-
-
-void Bajar_Consultas (Lista L , String nomArchConsultas) {
-FILE * f = fopen("Consultas.txt", "wb");
-while (L != NULL){
-    Bajar_Consulta (L -> info, f);
-    L = L -> sig;
-}
-fclose(f);
-}
-
-void Levantar_Consultas (Lista &L, String nomArchConsultas) {
-//printf("\nEntra en Levantar Consultas");
-FILE * f = fopen("Consultas.txt", "rb");
-Consulta buffer;
-Crear (L);
-//printf("\nCrea L"); // Hasta acá llega
-
-Levantar_Consulta (buffer, f); // Acá se cuelga
-//printf("\nLevanta primera consulta");
-
-while (!feof(f)) {
-        //printf("\nEntra en while levantar");
-    InsBackIter (L, buffer);
-    //printf("\nInsertó consulta en Lista");
-    Levantar_Consulta (buffer, f);
-}
-
-fclose (f);
-
-}
-
-boolean ExisteConsultas (String nomArchConsultas)
-{
-boolean existeArchivo = TRUE;
-FILE * f = fopen ("Consultas.txt", "rb");
-if (f == NULL)
-existeArchivo = FALSE;
-else
-fclose (f);
-return existeArchivo;
-}
-*/

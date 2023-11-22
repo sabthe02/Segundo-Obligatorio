@@ -49,27 +49,4 @@ void sumarConsulta (paciente &p) {
 p.cantConsultas = p.cantConsultas + 1;
 }
 
-/*
-void BajarPaciente (paciente p, FILE * f) {
-
-fwrite(&p.cedula, sizeof(long int), 1, f);
-Bajar_String (p.nombre, f);
-Bajar_String (p.apellido, f);
-fwrite(&p.telefono, sizeof(long int), 1, f);
-fwrite(&p.cantConsultas, sizeof(int), 1, f);
-}
-
-void LevantarPaciente (paciente &p, FILE * f) {
-
-//printf("\nEntra a Levantar Paciente");
-fread(&p.cedula, sizeof(long int), 1, f);
-strcrear (p.nombre);
-Levantar_String (p.nombre, f);
-strcrear (p.apellido);
-Levantar_String (p.apellido, f);
-fread(&p.telefono, sizeof(long int), 1, f);
-fread(&p.cantConsultas, sizeof(int), 1, f);
-
-}
-*/
 

@@ -40,25 +40,4 @@ Evaluacion seleccionarEvaluacion(Consulta c) {
     return c.evaluacion;
 }
 
-/*
-///// Operaciones de archivos
 
-void Bajar_Consulta (Consulta c, FILE * f) {
-
-    fwrite (&c.fec, sizeof(fecha), 1, f);
-    fwrite (&c.cedulaEnConsulta, sizeof(long int), 1, f);
-    Bajar_String (c.motivo, f);
-    fwrite (&c.evaluacion, sizeof(Evaluacion), 1, f);
-
-}
-
-void Levantar_Consulta (Consulta &c, FILE * f) {
-
-    fread (&c.fec, sizeof(fecha), 1, f);
-    fread(&c.cedulaEnConsulta, sizeof(long int), 1, f);
-    strcrear (c.motivo);
-    Levantar_String (c.motivo, f);
-    fread (&c.evaluacion, sizeof(Evaluacion), 1, f);
-
-}
-*/

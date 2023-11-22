@@ -63,7 +63,6 @@ void InsBackIter(Lista &L, Consulta c);
 // e igual o posterior a la fecha de la última consulta registrada hasta el momento en el sistema.
 void registrarConsulta (Lista &L, Consulta c);
 
-//-----
 // Obtener la cantidad de consultas de cada tipo
 void cantidadConsultasportratamiento (Lista L, int &tratamiento, int &protesis, int &saludable);
 
@@ -81,23 +80,13 @@ void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor);
 cedula aparece en la lista.*/
 int ContarCedulas (long int e, Lista L);
 
-//elimina consulta
+//Elimina consulta
+//PRECONDICIÓN: La cédula debe exisitir
 void eliminarConsulta(Lista &L, long int cedula);
 
-//desplegar consulta por fecha
+//Desplegar consulta por fecha
 //PRECONDICIÓN: la cédula debe existir
 void desplegarConsultaPorFecha(Lista L, fecha f);
 
-/*
-//OPERACIONES DE ARCHIVOS
-
-//Bajar Lista a un archivo
-void Bajar_Consultas(Lista L , String nomArch);
-
-//Subir lista a memoria
-void Levantar_Consultas (Lista &L, String nomArch);
-
-boolean ExisteConsultas (String nomArchConsultas);
-*/
 
 #endif // CONSULTAS_H_INCLUDED

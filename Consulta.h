@@ -10,21 +10,22 @@ typedef struct {
                 Evaluacion evaluacion;
                 } Consulta;
 
+//Despliega una consulta
 void desplegarConsulta (Consulta c);
 
+//Carga datos de una consulta
 void cargarConsulta (Consulta &c);
 
+// Selectora fecha
 fecha seleccionarFecha (Consulta c);
 
+// Selectora cédula de la consulta
 long int seleccionarCedulaConsulta (Consulta c);
 
+// Selectora motivo
 String seleccionarMotivo (Consulta c);
 
+// Selectora evaluación
 Evaluacion seleccionarEvaluacion (Consulta c);
-
-// Operaciones de archivos
-//void Bajar_Consulta (Consulta c, FILE * f);
-
-//void Levantar_Consulta (Consulta &c, FILE * f);
 
 #endif // CONSULTA_H_INCLUDED

@@ -185,55 +185,15 @@ if (a == NULL) {
     return 0;
 }
 else {
-    if (CaConsultas >= seleccionarCantConsultas(a->info)) {
+    if (seleccionarCantConsultas(a->info) >=CaConsultas) {
         return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
 
     }
     else {
-        return 0;
+        return obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
     }
 }
 
 }
 
-/*
 
-void BajarPacientes (ABB a, FILE *f) {
-
-if (a != NULL) {
-
-BajarPaciente(a->info, f);
-BajarPacientes (a->hizq, f);
-BajarPacientes (a->hder, f);
-}
-
-}
-
-void LevantarPacientes (ABB &a, String nomArchPacientes) {
-FILE *f2 = fopen("Pacientes.txt", "rb");
-paciente buffer;
-Crear(a);
-
-LevantarPaciente (buffer, f2);
-while (!feof(f2)) {
-    Insert(a, buffer);
-    LevantarPaciente(buffer, f2);
-
-}
-
-fclose (f2);
-
-}
-
-boolean ExistePacientes (String nomArchPacientes)
-{
-boolean existeArchivo = TRUE;
-FILE * f = fopen ("Pacientes.txt", "rb");
-if (f == NULL)
-existeArchivo = FALSE;
-else
-fclose (f);
-return existeArchivo;
-}
-
-*/
