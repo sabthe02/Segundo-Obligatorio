@@ -134,6 +134,7 @@ void strswp (String &s1,String &s2)
 
 }
 
+/*
 void Bajar_String (String s, FILE * f){
 int i =0;
 
@@ -159,3 +160,4 @@ while (aux[i]!='\0' && (!feof(f))) {
 strcop(s, aux);
 delete []aux;
 }
+*/

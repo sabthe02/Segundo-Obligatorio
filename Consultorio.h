@@ -60,11 +60,11 @@ void Borrar_Minimo (ABB &a);
 void eliminarConCedula (long int cedula, ABB &a);
 
 //
-void BajarPacientes (ABB a, FILE *f);
+//void BajarPacientes (ABB a, FILE *f);
 //Guardar información de todos los pacientes en archivo
 //Precondicion: Archivo viene abierto en modo escritura
 
-void LevantarPacientes (ABB &a, String nomArchPacientes);
+//void LevantarPacientes (ABB &a, String nomArchPacientes);
 //Subir información de todos los pacientes desde archivo
 
 void listarPacientes (ABB a);
@@ -83,5 +83,6 @@ void sumarConsultaAlABB (ABB &a, long int ced);
 int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
 // Dada una cantidad de consultas, obtener la cantidad de pacientes registrados en el sistema que han realizado al menos dicha cantidad de consultas
 //hasta el momento.
+
 
 #endif // CONSULTORIO_H_INCLUDED

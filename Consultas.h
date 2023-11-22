@@ -88,6 +88,7 @@ void eliminarConsulta(Lista &L, long int cedula);
 //PRECONDICIÓN: la cédula debe existir
 void desplegarConsultaPorFecha(Lista L, fecha f);
 
+/*
 //OPERACIONES DE ARCHIVOS
 
 //Bajar Lista a un archivo
@@ -95,5 +96,8 @@ void Bajar_Consultas(Lista L , String nomArch);
 
 //Subir lista a memoria
 void Levantar_Consultas (Lista &L, String nomArch);
+
+boolean ExisteConsultas (String nomArchConsultas);
+*/
 
 #endif // CONSULTAS_H_INCLUDED

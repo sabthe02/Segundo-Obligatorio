@@ -196,6 +196,7 @@ else {
 
 }
 
+/*
 
 void BajarPacientes (ABB a, FILE *f) {
 
@@ -209,7 +210,7 @@ BajarPacientes (a->hder, f);
 }
 
 void LevantarPacientes (ABB &a, String nomArchPacientes) {
-FILE *f2 = fopen(nomArchPacientes, "rb");
+FILE *f2 = fopen("Pacientes.txt", "rb");
 paciente buffer;
 Crear(a);
 
@@ -224,3 +225,15 @@ fclose (f2);
 
 }
 
+boolean ExistePacientes (String nomArchPacientes)
+{
+boolean existeArchivo = TRUE;
+FILE * f = fopen ("Pacientes.txt", "rb");
+if (f == NULL)
+existeArchivo = FALSE;
+else
+fclose (f);
+return existeArchivo;
+}
+
+*/

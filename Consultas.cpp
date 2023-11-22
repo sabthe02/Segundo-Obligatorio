@@ -302,12 +302,12 @@ void desplegarConsultaPorFecha(Lista L, fecha f){
 }
 
 
-
-// OPERACIONES DE ARCHIVOS
+/*
+OPERACIONES DE ARCHIVOS
 
 
 void Bajar_Consultas (Lista L , String nomArchConsultas) {
-FILE * f = fopen(nomArchConsultas, "wb");
+FILE * f = fopen("Consultas.txt", "wb");
 while (L != NULL){
     Bajar_Consulta (L -> info, f);
     L = L -> sig;
@@ -316,22 +316,34 @@ fclose(f);
 }
 
 void Levantar_Consultas (Lista &L, String nomArchConsultas) {
-printf("\nEntra en Levantar Consultas");
-FILE * f = fopen(nomArchConsultas, "rb");
+//printf("\nEntra en Levantar Consultas");
+FILE * f = fopen("Consultas.txt", "rb");
 Consulta buffer;
 Crear (L);
-  printf("\nCrea L"); // Hasta acá llega
+//printf("\nCrea L"); // Hasta acá llega
 
 Levantar_Consulta (buffer, f); // Acá se cuelga
-printf("\nLevanta primera consulta");
+//printf("\nLevanta primera consulta");
 
 while (!feof(f)) {
-        printf("\nEntra en while levantar");
+        //printf("\nEntra en while levantar");
     InsBackIter (L, buffer);
-    printf("\nInsertó consulta en Lista");
+    //printf("\nInsertó consulta en Lista");
     Levantar_Consulta (buffer, f);
 }
 
 fclose (f);
 
 }
+
+boolean ExisteConsultas (String nomArchConsultas)
+{
+boolean existeArchivo = TRUE;
+FILE * f = fopen ("Consultas.txt", "rb");
+if (f == NULL)
+existeArchivo = FALSE;
+else
+fclose (f);
+return existeArchivo;
+}
+*/

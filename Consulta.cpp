@@ -40,6 +40,7 @@ Evaluacion seleccionarEvaluacion(Consulta c) {
     return c.evaluacion;
 }
 
+/*
 ///// Operaciones de archivos
 
 void Bajar_Consulta (Consulta c, FILE * f) {
@@ -60,4 +61,4 @@ void Levantar_Consulta (Consulta &c, FILE * f) {
     fread (&c.evaluacion, sizeof(Evaluacion), 1, f);
 
 }
-
+*/

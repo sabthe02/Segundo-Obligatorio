@@ -3,6 +3,7 @@
 #include "Consulta.h"
 #include "Consultorio.h"
 #include "Consultas.h"
+#include "Archivo.h"
 
 int main()
 {
@@ -14,7 +15,8 @@ ABB a;
 long int ced;
 Lista L;
 Consulta c;
-String nomArchConsultas, nomArchPacientes;
+String nomArchConsultas = "Consultas.txt";
+String nomArchPacientes = "Pacientes.txt";
 
 int tratamiento = 0;
 int protesis = 0;
@@ -27,55 +29,10 @@ Crear(a);
 Crear(L);
 FILE *f, *f2;
 
-/*
-printf("\nINICIO PROGRAMA ");
-    printf("\n");
-    printf("\nIngrese nombre del archivo del cual quiere levantar las consultas (Consultas.txt) \n");
-    strcrear(nomArchConsultas);
-    scan(nomArchConsultas);
-
-    printf("\nIngrese nombre del archivo del cual quiere levantar los Pacientes (Pacientes.txt) \n");
-    strcrear(nomArchPacientes);
-    scan(nomArchPacientes);
-
-
-nomArchConsultas = new char [14];
-nomArchConsultas [0] = 'C';
-nomArchConsultas [1] = 'o';
-nomArchConsultas [2] = 'n';
-nomArchConsultas [3] = 's';
-nomArchConsultas [4] = 'u';
-nomArchConsultas [5] = 'l';
-nomArchConsultas [6] = 't';
-nomArchConsultas [7] = 'a';
-nomArchConsultas [8] = 's';
-nomArchConsultas [9] = '.';
-nomArchConsultas [10] = 't';
-nomArchConsultas [11] = 'x';
-nomArchConsultas [12] = 't';
-nomArchConsultas [13] = '\0';
-
-nomArchPacientes = new char [14];
-nomArchPacientes [0] = 'P';
-nomArchPacientes [1] = 'a';
-nomArchPacientes [2] = 'c';
-nomArchPacientes [3] = 'i';
-nomArchPacientes [4] = 'e';
-nomArchPacientes [5] = 'n';
-nomArchPacientes [6] = 't';
-nomArchPacientes [7] = 'e';
-nomArchPacientes [8] = 's';
-nomArchPacientes [9] = '.';
-nomArchPacientes [10] = 't';
-nomArchPacientes [11] = 'x';
-nomArchPacientes [12] = 't';
-nomArchPacientes [13] = '\0';
-*/
-
-if (L != NULL )
+if (ExisteArchivo (nomArchConsultas) == true)
 {Levantar_Consultas(L, nomArchConsultas);}
 
-if (a != NULL )
+if (ExisteArchivo (nomArchPacientes) == true)
 {LevantarPacientes(a, nomArchPacientes);}
 
 do
