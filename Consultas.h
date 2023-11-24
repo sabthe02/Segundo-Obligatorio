@@ -90,7 +90,6 @@ void eliminarConsulta(Lista &L, long int cedula);
 void desplegarConsultaPorFecha(Lista L, fecha f);
 
 // liberar memoria lista
-
 void liberarMemoriaLista(Lista &L);
 
 #endif // CONSULTAS_H_INCLUDED

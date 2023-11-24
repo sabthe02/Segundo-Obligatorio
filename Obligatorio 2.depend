@@ -24,18 +24,18 @@
 1700337736 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.cpp
 	"Menus.h"
 
-1700839927 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
+1700862485 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
 	<stdio.h>
 	<stdlib.h>
 
 1700839927 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.cpp
 	"Consulta.h"
 
-1700839927 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.h
+1700862391 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.h
 	"Fecha.h"
 	"Evaluacion.h"
 
-1700839927 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
+1700862439 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
 	<stdio.h>
 
 1700839927 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
@@ -53,13 +53,13 @@
 1700839927 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.cpp
 	"Consultas.h"
 
-1700839927 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
+1700862509 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
 	"Consulta.h"
 
 1700853496 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
 	"Consultorio.h"
 
-1700839927 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
+1700862311 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
 	"Paciente.h"
 
 1700332025 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio-main\consulta.cpp
@@ -266,7 +266,7 @@
 	"Consultorio.h"
 	"Consultorio.h"
 
-1700855184 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.cpp
+1700856189 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.cpp
 	"Archivo.h"
 
 1700855289 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.h

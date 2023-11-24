@@ -11,16 +11,22 @@ typedef struct {
                 Evaluacion evaluacion;
                 } Consulta;
 
+//Desplegar Consulta
 void desplegarConsulta (Consulta c);
 
+//Cargar consulta
 void cargarConsulta (Consulta &c);
 
+// Selectora fecha
 fecha seleccionarFecha (Consulta c);
 
+// Selectora cédula COnsulta
 long int seleccionarCedulaConsulta (Consulta c);
 
+// Selectora motivo
 String seleccionarMotivo (Consulta c);
 
+// Selectora Evaluación
 Evaluacion seleccionarEvaluacion (Consulta c);
 
 
