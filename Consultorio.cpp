@@ -160,7 +160,6 @@ if (a !=NULL) {
 
 }
 
-//Sumarle una consulta al paciente con la cédula que realizó una consulta
 void sumarConsultaAlABB (ABB &a, long int ced)
 {
 if (a != NULL )
