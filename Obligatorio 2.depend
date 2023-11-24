@@ -8,59 +8,61 @@
 1700528478 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.cpp
 	"Evaluacion.h"
 
-1700690161 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.cpp
+1700528478 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.cpp
 	"Fecha.h"
 	"Boolean.h"
 
-1700678812 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.h
+1700292202 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\fecha.h
 	"String.h"
 
-1700678983 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.h
+1700675431 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.h
 	<stdio.h>
 	"Boolean.h"
 
-1700679195 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\string.cpp
 	"String.h"
 
 1700337736 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.cpp
 	"Menus.h"
 
-1700679191 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
+1700346368 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\menus.h
 	<stdio.h>
 	<stdlib.h>
 
-1700679197 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.cpp
 	"Consulta.h"
 
-1700678574 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.h
+1700675431 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consulta.h
 	"Fecha.h"
 	"Evaluacion.h"
 
-1700679194 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
+1700235400 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\evaluacion.h
 	<stdio.h>
 
-1700699790 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\main.cpp
 	"Menus.h"
+	"Paciente.h"
+	"Consulta.h"
 	"Consultorio.h"
 	"Consultas.h"
 	"Archivo.h"
 
-1700694825 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.h
+1700675431 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.h
 	"Consultas.h"
 
-1700679196 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\paciente.cpp
 	"Paciente.h"
 
-1700690161 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.cpp
 	"Consultas.h"
 
-1700690161 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
+1700675431 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultas.h
 	"Consulta.h"
 
-1700690161 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.cpp
 	"Consultorio.h"
 
-1700690161 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
+1700675431 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\consultorio.h
 	"Paciente.h"
 
 1700332025 source:c:\users\bruno\documents\bruno\facultad\licenciatura en informática\segundo semestre\programación ii\segundo obligatorio\segundo-obligatorio-main\consulta.cpp
@@ -270,11 +272,15 @@
 	"Consultorio.h"
 	"Consultorio.h"
 
-1700679192 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.cpp
+1700675431 source:c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.cpp
 	"Archivo.h"
 
-1700699180 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.h
+1700675614 c:\users\sabth\ude (licenciatura en informática)\p ii\segundo-obligatorio\archivo.h
+	"String.h"
+	"Boolean.h"
+	"Consulta.h"
 	"Consultas.h"
+	"Consultorio.h"
 	"Consultorio.h"
 
 1700686623 source:c:\users\ramiro\documents\github\segundo-obligatorio\archivo.cpp

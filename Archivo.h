@@ -1,7 +1,11 @@
 #ifndef ARCHIVO_H_INCLUDED
 #define ARCHIVO_H_INCLUDED
 
+#include "String.h"
+#include "Boolean.h"
+#include "Consulta.h"
 #include "Consultas.h"
+#include "Consultorio.h"
 #include "Consultorio.h"
 
 //Saber si existe un archivo

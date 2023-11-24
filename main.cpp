@@ -1,4 +1,6 @@
 #include "Menus.h"
+#include "Paciente.h"
+#include "Consulta.h"
 #include "Consultorio.h"
 #include "Consultas.h"
 #include "Archivo.h"
