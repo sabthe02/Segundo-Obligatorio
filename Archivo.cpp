@@ -68,14 +68,19 @@ fclose(f);
 }
 
 void Levantar_Consultas (Lista &L, String nomArchConsultas) {
+//printf("\nEntra en Levantar Consultas");
 FILE * f = fopen("Consultas.txt", "rb");
 Consulta buffer;
 Crear (L);
+//printf("\nCrea L"); // Hasta acá llega
 
-Levantar_Consulta (buffer, f);
+Levantar_Consulta (buffer, f); // Acá se cuelga
+//printf("\nLevanta primera consulta");
 
 while (!feof(f)) {
+        //printf("\nEntra en while levantar");
     InsBackIter (L, buffer);
+    //printf("\nInsertó consulta en Lista");
     Levantar_Consulta (buffer, f);
 }
 
@@ -95,6 +100,7 @@ fwrite(&p.cantConsultas, sizeof(int), 1, f);
 
 void LevantarPaciente (paciente &p, FILE * f) {
 
+//printf("\nEntra a Levantar Paciente");
 fread(&p.cedula, sizeof(long int), 1, f);
 strcrear (p.nombre);
 Levantar_String (p.nombre, f);

@@ -48,5 +48,3 @@ return p.cantConsultas;
 void sumarConsulta (paciente &p) {
 p.cantConsultas = p.cantConsultas + 1;
 }
-
-

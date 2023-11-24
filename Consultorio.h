@@ -1,5 +1,6 @@
 #ifndef CONSULTORIO_H_INCLUDED
 #define CONSULTORIO_H_INCLUDED
+
 #include "Paciente.h"
 
 
@@ -59,24 +60,25 @@ void Borrar_Minimo (ABB &a);
 // Precondición, cédula del paciente existe en el sistema.
 void eliminarConCedula (long int cedula, ABB &a);
 
+void listarPacientes (ABB a);
 // Listar todos los pacientes registrados en el sistema, ordenados por cédula de identidad de menor a mayor.
 //Los datos de cada paciente (cédula, nombre, apellido, teléfono y cantidad de consultas realizadas hasta el momento)
 //deben listarse todos en una misma línea.
-void listarPacientes (ABB a);
 
+void listarPacientesSinConsultas (ABB a);
 // Listar aquellos pacientes registrados en el sistema que aún no han realizado ninguna consulta al dentista.
 // Los datos de cada paciente (cédula, nombre, apellido, teléfono y cantidad de consultas realizadas hasta el momento)
 //deben listarse todos en una misma línea.
-void listarPacientesSinConsultas (ABB a);
 
 //Sumarle una consulta al paciente con la cédula que realizó una consulta
 void sumarConsultaAlABB (ABB &a, long int ced);
 
+int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
 // Dada una cantidad de consultas, obtener la cantidad de pacientes registrados en el sistema que han realizado al menos dicha cantidad de consultas
 //hasta el momento.
-int obtenerPacientesConCantidadDeConsultas (ABB a, int CaConsultas);
 
-//liberar memoria otorgada para Arboles
+// liberar memoria arbol
+
 void liberarArbol(ABB &a);
 
 #endif // CONSULTORIO_H_INCLUDED

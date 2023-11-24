@@ -1,5 +1,6 @@
 #ifndef CONSULTAS_H_INCLUDED
 #define CONSULTAS_H_INCLUDED
+
 #include "Consulta.h"
 
 typedef struct nodoB {
@@ -63,6 +64,7 @@ void InsBackIter(Lista &L, Consulta c);
 // e igual o posterior a la fecha de la última consulta registrada hasta el momento en el sistema.
 void registrarConsulta (Lista &L, Consulta c);
 
+//-----
 // Obtener la cantidad de consultas de cada tipo
 void cantidadConsultasportratamiento (Lista L, int &tratamiento, int &protesis, int &saludable);
 
@@ -80,15 +82,15 @@ void mayorcantidadconsultas (Lista L, long int &cedula, int &mayor);
 cedula aparece en la lista.*/
 int ContarCedulas (long int e, Lista L);
 
-//Elimina consulta
-//PRECONDICIÓN: La cédula debe exisitir
+//elimina consulta
 void eliminarConsulta(Lista &L, long int cedula);
 
-//Desplegar consulta por fecha
+//desplegar consulta por fecha
 //PRECONDICIÓN: la cédula debe existir
 void desplegarConsultaPorFecha(Lista L, fecha f);
 
-//liberar memoria otorgada para Lista
+// liberar memoria lista
+
 void liberarMemoriaLista(Lista &L);
 
 #endif // CONSULTAS_H_INCLUDED

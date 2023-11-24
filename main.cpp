@@ -1,6 +1,4 @@
 #include "Menus.h"
-#include "Paciente.h"
-#include "Consulta.h"
 #include "Consultorio.h"
 #include "Consultas.h"
 #include "Archivo.h"
@@ -18,9 +16,7 @@ Consulta c;
 String nomArchConsultas = "Consultas.txt";
 String nomArchPacientes = "Pacientes.txt";
 
-int tratamiento = 0;
-int protesis = 0;
-int saludable = 0;
+int tratamiento,protesis,saludable;
 
 long int lacedu;
 int lamayor;
@@ -128,6 +124,9 @@ switch (selec)
                         printf("\n");
                         break;
                         case 2: printf("\nLa cantidad de consultas de cada tipo son: ");
+                                tratamiento = 0;
+                                protesis = 0;
+                                saludable = 0;
                                 cantidadConsultasportratamiento (L, tratamiento,protesis,saludable);
                                 printf ("\nEn tratamiento - %d / Protesis - %d / Saludable - %d\n",tratamiento,protesis,saludable);
                                 printf("\n");

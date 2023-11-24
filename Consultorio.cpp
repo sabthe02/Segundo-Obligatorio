@@ -185,13 +185,9 @@ if (a == NULL) {
     return 0;
 }
 else {
-    if (seleccionarCantConsultas(a->info) >=CaConsultas) {
-        return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
-
-    }
-    else {
-        return obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);
-    }
+    if (CaConsultas <= seleccionarCantConsultas(a->info))
+        {return 1+ obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);}
+    else {return obtenerPacientesConCantidadDeConsultas (a->hizq, CaConsultas) + obtenerPacientesConCantidadDeConsultas(a->hder, CaConsultas);}
 }
 
 }
@@ -205,5 +201,3 @@ void liberarArbol(ABB &a)
         delete a;
     }
 }
-
-

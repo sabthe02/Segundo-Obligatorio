@@ -39,5 +39,3 @@ String seleccionarMotivo(Consulta c) {
 Evaluacion seleccionarEvaluacion(Consulta c) {
     return c.evaluacion;
 }
-
-
